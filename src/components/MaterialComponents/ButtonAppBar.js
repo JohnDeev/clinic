@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -16,16 +17,21 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarButtons:{
     marginLeft: 'auto',
-    //frexGrow: 1,
+  },
+  toolbarColor:{
+    background: '#2196f3',
   },
 }));
 
-export default function DenseAppBar() {
+export default function ButtonAppBar() {
   const classes = useStyles();
-
-  return (
+  
+  const handleUpdateClick =() =>{
+    
+  }
+    return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: '#2196f3' }}>
+      <AppBar position="static" className={classes.toolbarColor}>
         <Toolbar variant="dense">
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -34,10 +40,13 @@ export default function DenseAppBar() {
             SISM
           </Typography>
           <div className={classes.toolbarButtons}>
-            <Button color="inherit" >Quienes somos</Button>
-            <Button color="inherit" >Misión y Visión</Button>
+            
+            <Button color="inherit" onClick={handleUpdateClick}>Inicio</Button>
+            <Button color="inherit" >¿Quienes somos?</Button>
             <Button color="inherit" >Portafolio</Button>
-            <Button color="inherit" >Contacto</Button></div>
+            <Button color="inherit" >Contacto</Button>
+            
+            </div>
         </Toolbar>
       </AppBar>
     </div>
