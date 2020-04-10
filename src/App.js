@@ -5,8 +5,8 @@ import ButtonAppBar from './components/MaterialComponents/ButtonAppBar';
 //import Home from './components/PageComponent/Home';
 //import AboutUs from './components/PageComponent/AboutUs';
 //import Portfolio from './components/PageComponent/Portfolio';
-import Information from './components/PageComponent/Information';
 import './App.css';
+import ContComponent from './components/PageComponent/ContComponent'
 
 class App extends Component {
 
@@ -35,9 +35,8 @@ class App extends Component {
     return (
     <div className="App">
           <ButtonAppBar></ButtonAppBar>
-          <Information codeInfo={this.initialInfo}></Information>
+          <ContComponent></ContComponent>
           <FooterPage description={"abc"} title={"SISM"}></FooterPage>
-          <button onClick={this.handleUpdateClick}>Inicio</button>
     </div>
   )
   };

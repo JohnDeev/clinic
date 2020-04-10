@@ -6,6 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
+import {Link, BrowserRouter as Router} from 'react-router-dom';
+import ContComponent from './../PageComponent/ContComponent';
+import './styles.css';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,10 +29,8 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
   
-  const handleUpdateClick =() =>{
-    
-  }
     return (
+      <Router>
     <div className={classes.root}>
       <AppBar position="static" className={classes.toolbarColor}>
         <Toolbar variant="dense">
@@ -41,14 +42,15 @@ export default function ButtonAppBar() {
           </Typography>
           <div className={classes.toolbarButtons}>
             
-            <Button color="inherit" onClick={handleUpdateClick}>Inicio</Button>
-            <Button color="inherit" >¿Quienes somos?</Button>
-            <Button color="inherit" >Portafolio</Button>
-            <Button color="inherit" >Contacto</Button>
-            
+            <Link to="/" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Inicio</Button></Link> 
+            <Link to="/quienessomos" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>¿Quienes somos?</Button></Link>
+            <Link to="/portafolio" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Portafolio</Button></Link>
+            <Link to="/contacto" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Contacto</Button></Link>
+
             </div>
         </Toolbar>
       </AppBar>
     </div>
+    </Router>
   );
 }
