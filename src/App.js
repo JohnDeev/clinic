@@ -25,11 +25,6 @@ class App extends Component {
     console.log("Actualizado");
   }
 
-  handleUpdateClick =()=>{
-    console.log("click");
-
-  }
-  
   render(){
     console.log("render");
     return (
