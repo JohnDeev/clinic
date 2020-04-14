@@ -30,12 +30,15 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]:{
+      display: 'none',
+    },
   },
   title: {
     display: 'block',
-    /*[theme.breakpoints.up('sm')]: {
+    /* [theme.breakpoints.up('sm')]: {
       display: 'block',
-    },*/
+    }, */
   },
   search: {
     position: 'relative',
@@ -177,6 +180,7 @@ export default function ButtonApBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={handleMobileMenuOpen}
           >
             <MenuIcon />
           </IconButton>
