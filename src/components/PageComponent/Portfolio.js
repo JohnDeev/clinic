@@ -39,7 +39,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3,4];
+const cards = [1, 2, 3,4,5,6,7,8,9,10];
+// eslint-disable-next-line
+const serviceTitle=[
+'Medicina General',  
+'Medicina Interna',
+'Ginecostetricia',
+'Pediatria',
+'Enfermería',
+'Promoción en Salud',
+'Planificación Familiar',
+'Nutrición y Dietética',
+'Psicología',
+'Laboratorio Clínico',
+'Toma de muestras de laboratorio clínico',
+'Endocrinología',
+'Gastroenterología',
+'Neumología',
+'Neurología',
+'Otorrinolaringología',
+'Urología',
+'Dermatología',
+'Ultrasonido',
+
+];
 
 export default function Album() {
   const classes = useStyles();
