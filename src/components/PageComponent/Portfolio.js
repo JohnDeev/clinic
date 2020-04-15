@@ -39,30 +39,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3,4,5,6,7,8,9,10];
-// eslint-disable-next-line
-const serviceTitle=[
-'Medicina General',  
-'Medicina Interna',
-'Ginecostetricia',
-'Pediatria',
-'Enfermería',
-'Promoción en Salud',
-'Planificación Familiar',
-'Nutrición y Dietética',
-'Psicología',
-'Laboratorio Clínico',
-'Toma de muestras de laboratorio clínico',
-'Endocrinología',
-'Gastroenterología',
-'Neumología',
-'Neurología',
-'Otorrinolaringología',
-'Urología',
-'Dermatología',
-'Ultrasonido',
+const infoPortfolio=[
 
-];
+{id:1 ,name:'Medicina General', image:'', description: '1'},
+{id:2 ,name:'Medicina Interna', image:'', description: '2'},
+{id:3 ,name:'Ginescostetricia', image:'', description: '3'},
+{id:4 ,name:'Pediatria', image:'', description: '4'},
+{id:5 ,name:'Enferería', image:'', description: '5'},
+{id:6 ,name:'Promoción en salud', image:'', description: '6'},
+{id:7 ,name:'Planificación familiar', image:'', description: '7'},
+{id:8 ,name:'Nutrición y dietética', image:'', description: '8'},
+{id:9 ,name:'Psicología', image:'', description: '9'},
+{id:10 ,name:'Laboratorio clínico', image:'', description: '10'},
+{id:11 ,name:'Toma de muestras de laboratorio clínico', image:'', description: '11'},
+{id:12 ,name:'Endocrinología', image:'', description: '12'},
+{id:13 ,name:'Gastroenterología', image:'', description: '13'},
+{id:14 ,name:'Neumología', image:'', description: '14'},
+{id:15 ,name:'Neurología', image:'', description: '15'},
+{id:16 ,name:'Otorrinolaringología', image:'', description: '16'},
+{id:17 ,name:'Urología', image:'', description: '17'},
+{id:18 ,name:'Dermatología', image:'', description: '18'},
+{id:19 ,name:'Ultrasonido', image:'', description: '19'},
+
+]
 
 export default function Album() {
   const classes = useStyles();
@@ -73,8 +72,8 @@ export default function Album() {
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
       <Grid container spacing={6}>
-        {cards.map((card) => (
-          <Grid item key={card} xs={12} sm={6} md={4}>
+        {infoPortfolio.map((item, key) => (
+          <Grid item key={item} xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
@@ -83,11 +82,10 @@ export default function Album() {
               />
               <CardContent className={classes.cardContent}>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Heading
+                  {item.name}
                 </Typography>
                 <Typography>
-                  This is a media card. You can use this section to describe the content.
-                </Typography>
+{item.description}                </Typography>
               </CardContent>
               <CardActions>
                 <Button size="small" color="primary">
