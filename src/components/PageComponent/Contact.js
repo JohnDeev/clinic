@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
+import { withStyles } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import TextField from "@material-ui/core/TextField";
+import MenuItem from "@material-ui/core/MenuItem";
+import Button from "@material-ui/core/Button";
+
 class Contact extends Component {
     render() {
         return (
@@ -15,24 +23,89 @@ class Contact extends Component {
                 }}
                 validationSchema={Yup.object().shape({
                     firstName: Yup.string()
-                        .required('First Name is required'),
+                        .required('Nombres son requeridos'),
                     lastName: Yup.string()
-                        .required('Last Name is required'),
+                        .required('Apellidos son requeridos'),
                     phone: Yup.string()
-                        .min(7, 'Number invalid')
-                        .required('Phone number is required'),
+                        .min(7, 'Número inválido')
+                        .required('Número de teléfono son requeridos'),
                     email: Yup.string()
-                        .email('Email is invalid')
-                        .required('Email is required'),
+                        .email('Correo inválido')
+                        .required('Correo es requerido'),
                     comment: Yup.string()
-                        .min(6, 'Comment must be at least 6 characters')
-                        .required('Comment is required'),
+                        .min(6, 'Los comentarios deben tener mínimo 6 caracteres')
+                        .required('Comentario es requerido'),
                 })}
                 onSubmit={fields => {
                     alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
                 }}
                 render={({ errors, status, touched }) => (
-                    <Form>
+                    <Form >
+                        <TextField
+                            id="firstName"
+                            label="Nombres"
+                            //value= {values.firstName} //Acá está el problema
+                            //onChange = {handleChange}
+                            //onBlur = {handleBlur}
+                            helperText={touched.firstName ? errors.firstName : ""}
+                            error={touched.firstName && Boolean(errors.firstName)}
+                            margin="dense"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <TextField
+                            id="lastName"
+                            label="Apellidos"
+                            //value= {values.lastName}//Acá está el problema
+                            //onChange = {handleChange}
+                            //onBlur = {handleBlur}
+                            helperText={touched.lastName ? errors.lastName : ""}
+                            error={touched.lastName && Boolean(errors.lastName)}
+                            margin="dense"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <TextField
+                            id="phone"
+                            label="Teléfono"
+                            type="number"
+                            //value= {values.phone}//Acá está el problema
+                            //onChange = {handleChange}
+                            //onBlur = {handleBlur}
+                            helperText={touched.phone ? errors.phone : ""}
+                            error={touched.phone && Boolean(errors.phone)}
+                            margin="dense"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <TextField
+                            id="email"
+                            label="Correo electrónico"
+                            //value= {values.email}//Acá está el problema
+                            //onChange = {handleChange}
+                            //onBlur = {handleBlur}
+                            helperText={touched.email ? errors.email : ""}
+                            error={touched.email && Boolean(errors.email)}
+                            type="email"
+                            margin="dense"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <TextField
+                            id="comment"
+                            label="Comentario"
+                            //value= {values.comment}//Acá está el problema
+                            //onChange = {handleChange}
+                            //onBlur = {handleBlur}
+                            helperText={touched.comment ? errors.comment : ""}
+                            error={touched.comment && Boolean(errors.comment)}
+                            multiline
+                            rows={4}
+                            margin="dense"
+                            variant="outlined"
+                            fullWidth
+                        />
+
                         <div className="form-group">
                             <label htmlFor="firstName">Nombres</label>
                             <Field name="firstName" type="text" className={'form-control' + (errors.firstName && touched.firstName ? ' is-invalid' : '')} />

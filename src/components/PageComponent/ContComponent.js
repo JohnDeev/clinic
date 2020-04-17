@@ -8,6 +8,7 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 
 
+
 const ContComponent = props => {
 
     const renderHome =() =><Home></Home>;
