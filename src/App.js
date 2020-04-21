@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import FooterPage from './components/MaterialComponents/FooterPage';
 import ButtonAppBar from './components/MaterialComponents/ButtonAppBar';
 import './App.css';
 import ContComponent from './components/PageComponent/ContComponent'
+import AppFooter from './components/MaterialComponents/AppFooter';
 
 class App extends Component {
 
@@ -27,7 +29,7 @@ class App extends Component {
     <div className="App">
           <ButtonAppBar></ButtonAppBar>
           <ContComponent></ContComponent>
-          <FooterPage description={"abc"} title={"SISM"}></FooterPage>
+          <AppFooter></AppFooter>
     </div>
   )
   };
