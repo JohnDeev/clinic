@@ -17,7 +17,7 @@ function Copyright() {
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        SISM
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -67,17 +67,6 @@ const useStyles = makeStyles((theme) => ({
     width: 150,
   },
 }));
-// eslint-disable-next-line
-const LANGUAGES = [
-  {
-    code: 'en-US',
-    name: 'English',
-  },
-  {
-    code: 'fr-FR',
-    name: 'Français',
-  },
-];
 
 export default function AppFooter() {
   const classes = useStyles();
@@ -92,13 +81,12 @@ export default function AppFooter() {
               direction="column"
               justify="flex-end"
               className={classes.iconsWrapper}
-              spacing={2}
-            >
+              spacing={2}>
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className="enlaceMenu">
+                <a href="https://www.facebook.com/sism.ips" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
                   <FacebookIcon style={{ fontSize: 40,  color: "#3b5998"}} className={classes.icon}/>
                 </a>
-                <a href="https://twitter.com/MaterialUI" className="enlaceMenu">
+                <a href="https://twitter.com/ipssism" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
                   <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon}/>
                 </a>
               </Grid>
@@ -120,7 +108,6 @@ export default function AppFooter() {
               </li>
             </ul>
           </Grid>
-          
         </Grid>
       </Container>
     </Typography>

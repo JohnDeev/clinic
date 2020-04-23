@@ -22,6 +22,7 @@ import './styles.css'
 import ContComponent from './../PageComponent/ContComponent';
 
 const useStyles = makeStyles((theme) => ({
+  offset: theme.mixins.toolbar,
   toolbarColor:{
     background: '#2196f3',
   },
@@ -173,7 +174,7 @@ export default function ButtonApBar() {
   return (
     <Router>
     <div className={classes.grow}>
-      <AppBar position="static" className={classes.toolbarColor}>
+      <AppBar position="fixed" className={classes.toolbarColor}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -208,6 +209,7 @@ export default function ButtonApBar() {
           </div>
         </Toolbar>
       </AppBar>
+      <div className={classes.offset} />
       {renderMobileMenu}
       {renderMenu}
     </div>
