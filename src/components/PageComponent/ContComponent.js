@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route}  from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Portfolio from './Portfolio';
-import Contact from './Contact';
+import Contact from './Contact/index';
 
 
 

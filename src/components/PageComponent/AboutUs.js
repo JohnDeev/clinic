@@ -7,6 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+import ImageBanner from './../MaterialComponents/ImageBanner';
+
 
 import mision from './../../img/misionTest.jpg';
 import vision from './../../img/visionTest.jpg';
@@ -66,6 +68,7 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       <CssBaseline />
+      <ImageBanner titulo='Nuestra empresa' />
       <Container >
         <Typography component="div" style={{ textAlign: 'justify' }}>
           <div className={classes.root}><h2>Misión</h2></div>

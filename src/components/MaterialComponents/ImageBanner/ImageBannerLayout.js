@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import logo from './../../../img/logosism.png'
+//import logo from './../../../img/logosism.png'
 
 const styles = (theme) => ({
   root: {
@@ -11,10 +11,10 @@ const styles = (theme) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
-    height: '80vh',
+    height: '25vh',
     [theme.breakpoints.up('sm')]: {
-      height: '80vh',
-      minHeight: 500,
+      height: '15vh',
+      minHeight: 250,
       maxHeight: 1300,
     },
   },
@@ -51,18 +51,18 @@ const styles = (theme) => ({
   },
 });
 
-function FrontPageLayout(props) {
+function ImageBannerLayout(props) {
   const { backgroundClassName, children, classes } = props;
 
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
+       {/*  <img
           src={logo}
           alt="sismlogo"
          width="80"
           height="147"
-        />
+        /> */}
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
@@ -78,10 +78,10 @@ function FrontPageLayout(props) {
   );
 }
 
-FrontPageLayout.propTypes = {
+ImageBannerLayout.propTypes = {
   backgroundClassName: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(FrontPageLayout);
+export default withStyles(styles)(ImageBannerLayout);

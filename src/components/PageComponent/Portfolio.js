@@ -10,6 +10,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 //import CssBaseline from '@material-ui/core/CssBaseline';
 
+import ImageBanner from './../MaterialComponents/ImageBanner';
+
 import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
 import medicinainterna from './../../img/portfolioImg/medicinainterna.png';
 import ginescostetricia from './../../img/portfolioImg/ginescostetricia.jpg';
@@ -89,6 +91,7 @@ export default function Album() {
 
   return (
     <main>
+      <ImageBanner titulo='Nuestros servicios' />
           
        <Container className={classes.cardGrid} >
       {/* End hero unit */}

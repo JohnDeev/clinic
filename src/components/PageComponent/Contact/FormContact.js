@@ -8,6 +8,8 @@ import CardActions from "@material-ui/core/CardActions";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+
+
 const styles = () => ({
     card: {
         maxWidth: 420,
@@ -38,8 +40,11 @@ const form = props => {
     } = props;
 
     return (
+        
         <div className={classes.container}>
+            
             <form onSubmit={handleSubmit}>
+                
                 <Card className={classes.card}>
                     <CardContent>
                         <TextField
@@ -119,11 +124,13 @@ const form = props => {
                     </CardActions>
                 </Card>
             </form>
+        
         </div>
+        
     );
 };
 
-const Contact = withFormik({
+const FormContact = withFormik({
     mapPropsToValues: ({
         firstName,
         lastName,
@@ -159,4 +166,4 @@ const Contact = withFormik({
     }
 })(form);
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(FormContact);
