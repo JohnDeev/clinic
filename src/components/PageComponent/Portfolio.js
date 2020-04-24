@@ -1,6 +1,8 @@
 import React from 'react';
+// eslint-disable-next-line
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+// eslint-disable-next-line
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -108,15 +110,15 @@ export default function Album() {
                 <Typography gutterBottom variant="h5" component="h2">
                   {item.name}
                 </Typography>
-                <Typography>
+                {/* <Typography>
                     {item.description}                
-                </Typography>
+                </Typography> */}
               </CardContent>
-              <CardActions>
+              {/* <CardActions>
                 <Button size="small" color="primary">
                   View
                 </Button>
-              </CardActions>
+              </CardActions> */}
             </Card>
           </Grid>
         ))}

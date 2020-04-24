@@ -39,6 +39,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
     justifyContent: "center",
   },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: "fixed",
+  },
 
   cardGrid: {
     paddingTop: theme.spacing(8),
