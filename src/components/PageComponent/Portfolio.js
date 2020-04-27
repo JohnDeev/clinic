@@ -66,25 +66,25 @@ const useStyles = makeStyles((theme) => ({
 
 const infoPortfolio=[
 
-{id:1 , name:'Medicina General', image:{medicinageneral}, description: '1'},
-{id:2 , name:'Medicina Interna', image:{medicinainterna}, description: '2'},
-{id:3 , name:'Ginescostetricia', image:{ginescostetricia}, description: '3'},
-{id:4 , name:'Pediatria', image:{pediatria}, description: '4'},
-{id:5 , name:'Enfermería', image:{enfermeria}, description: '5'},
-{id:6 , name:'Promoción en salud', image:{promocionensalud}, description: '6'},
-{id:7 , name:'Planificación familiar', image:{planificacionfamiliar}, description: '7'},
-{id:8 , name:'Nutrición y dietética', image:{nutricionydietetica}, description: '8'},
-{id:9 , name:'Psicología', image:{psicologia}, description: '9'},
-{id:10 ,name:'Laboratorio clínico', image:{laboratorioclinico}, description: '10'},
-{id:11 ,name:'Toma de muestras de laboratorio clínico', image:{tomademuestradelaboratorioclinico}, description: '11'},
-{id:12 ,name:'Endocrinología', image:{endocrinologia}, description: '12'},
-{id:13 ,name:'Gastroenterología', image:{gastroenterologia}, description: '13'},
-{id:14 ,name:'Neumología', image:{neumologia}, description: '14'},
-{id:15 ,name:'Neurología', image:{neurologia}, description: '15'},
-{id:16 ,name:'Otorrinolaringología', image:{otorrinolaringologia}, description: '16'},
-{id:17 ,name:'Urología', image:{urologia}, description: '17'},
-{id:18 ,name:'Dermatología', image:{dermatologia}, description: '18'},
-{id:19 ,name:'Ultrasonido', image:{ultrasonido}, description: '19'},
+{name:'Medicina General', image:medicinageneral, description: '1'},
+{name:'Medicina Interna', image:medicinainterna, description: '2'},
+{name:'Ginescostetricia', image:ginescostetricia, description: '3'},
+{name:'Pediatria', image:pediatria, description: '4'},
+{name:'Enfermería', image:enfermeria, description: '5'},
+{name:'Promoción en salud', image:promocionensalud, description: '6'},
+{name:'Planificación familiar', image:planificacionfamiliar, description: '7'},
+{name:'Nutrición y dietética', image:nutricionydietetica, description: '8'},
+{name:'Psicología', image:psicologia, description: '9'},
+{name:'Laboratorio clínico', image:laboratorioclinico, description: '10'},
+{name:'Toma de muestras de laboratorio clínico', image:tomademuestradelaboratorioclinico, description: '11'},
+{name:'Endocrinología', image:endocrinologia, description: '12'},
+{name:'Gastroenterología', image:gastroenterologia, description: '13'},
+{name:'Neumología', image:neumologia, description: '14'},
+{name:'Neurología', image:neurologia, description: '15'},
+{name:'Otorrinolaringología', image:otorrinolaringologia, description: '16'},
+{name:'Urología', image:urologia, description: '17'},
+{name:'Dermatología', image:dermatologia, description: '18'},
+{name:'Ultrasonido', image:ultrasonido, description: '19'},
 
 ]
 
@@ -98,12 +98,12 @@ export default function Album() {
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
       <Grid container spacing={6}>
-        {infoPortfolio.map((item, key) => (
+        {infoPortfolio.map((item) => (
           <Grid item key={item} xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
+                image={item.image}
                 title="Image title"
               />
               <CardContent className={classes.cardContent}>

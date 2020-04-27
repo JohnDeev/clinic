@@ -6,11 +6,12 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 // eslint-disable-next-line
 import TextField from '@material-ui/core/TextField';
-import { grey } from '@material-ui/core/colors';
 
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook'
 import './styles.css';
+
+import logoSism from './../../img/logo_sism.png';
 
 
 // eslint-disable-next-line
@@ -29,10 +30,18 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: grey,
+    //backgroundColor: '#808080',
+  },
+  prueba:{
+    backgroundColor: '#808080',
   },
   container: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(5),
+    display: 'flex',
+  },
+  container2: {
+    marginTop: theme.spacing(6),
     marginBottom: theme.spacing(5),
     display: 'flex',
   },
@@ -41,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
   },
   icons: {
     display: 'flex',
+  },
+  logo:{
+    width: 245,
+    height: 80,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   icon: {
     width: 48,
@@ -80,6 +95,22 @@ export default function AppFooter() {
     <Typography component="footer" className={classes.root}>
       <Container className={classes.container}>
         <Grid container spacing={5}>
+
+        <Grid  item xs={6} sm={4} md={3}>
+            <img  src={logoSism} alt="sism"  className={classes.logo}></img>
+          </Grid>
+        
+          
+          
+          <Grid /* container */ item xs={6} sm={4} md={5} className={classes.text}>
+            <Typography marked="left" gutterBottom >
+              Carrera 19 No. 26B - 53 Barrio Los Naranjos
+            </Typography>
+            <Typography marked="left" gutterBottom >
+              Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
+            </Typography>
+          </Grid>
+
           <Grid item xs={6} sm={4} md={3}>
             <Grid
               // container
@@ -98,14 +129,8 @@ export default function AppFooter() {
 
             </Grid>
           </Grid>
-          <Grid /* container */ item xs={6} sm={4} md={5} className={classes.text}>
-            <Typography marked="left" gutterBottom >
-              Carrera 19 No. 26B - 53 Barrio Los Naranjos
-            </Typography>
-            <Typography marked="left" gutterBottom >
-              Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
-            </Typography>
-          </Grid>
+          
+
         </Grid>
       </Container>
     </Typography>
