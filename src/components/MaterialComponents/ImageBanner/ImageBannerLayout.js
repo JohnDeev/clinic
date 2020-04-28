@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 //import logo from './../../../img/logosism.png'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     color: theme.palette.common.white,
     position: 'relative',
@@ -63,7 +63,7 @@ function ImageBannerLayout(props) {
       </Container>
     </section>
   );
-}
+};
 
 ImageBannerLayout.propTypes = {
   backgroundClassName: PropTypes.string.isRequired,

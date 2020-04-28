@@ -93,7 +93,7 @@ export default function Album() {
 
   return (
     <main>
-      <ImageBanner titulo='Nuestros servicios' />
+      <ImageBanner titulo='Nuestros servicios' img={ultrasonido} />
           
        <Container className={classes.cardGrid} >
       {/* End hero unit */}

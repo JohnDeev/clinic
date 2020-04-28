@@ -4,18 +4,17 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-// eslint-disable-next-line
-import TextField from '@material-ui/core/TextField';
 
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook'
+
 import './styles.css';
 
 import logoSism from './../../img/logo_sism.png';
 
 
 // eslint-disable-next-line
-function Copyright() {
+const Copyright = () => {
   return (
     <React.Fragment>
       {'© '}
@@ -39,11 +38,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(5),
     display: 'flex',
-  },
-  container2: {
-    marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(5),
-    display: 'flex',
+    alignItems: 'center',
+
   },
   iconsWrapper: {
     height: 20,
@@ -88,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function AppFooter() {
+const AppFooter = () => {
   const classes = useStyles();
 
   return (
@@ -135,4 +131,6 @@ export default function AppFooter() {
       </Container>
     </Typography>
   );
-}
+};
+
+export default AppFooter;
