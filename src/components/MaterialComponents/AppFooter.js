@@ -31,14 +31,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     //backgroundColor: '#808080',
   },
-  prueba:{
-    backgroundColor: '#808080',
-  },
   container: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(5),
     display: 'flex',
     alignItems: 'center',
+    marginLeft: theme.spacing(14),
 
   },
   iconsWrapper: {
@@ -63,14 +61,16 @@ const useStyles = makeStyles((theme) => ({
 
     marginRight: theme.spacing(1),
     '&:hover': {
-      //backgroundColor: theme.palette.warning.dark,
+    //backgroundColor: theme.palette.warning.dark,
     },
   },
   text: {
     display: 'hover',
     justifyContent: 'justify',
     alignItems: 'justify',
-    marginLeft: theme.spacing(6),
+    paddingTop: '20px',
+    //marginLeft: theme.spacing(6),
+    
   },
   list: {
     margin: 0,
@@ -80,6 +80,19 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(0.5),
+  },
+  logotipo:{
+    width: 245,
+    height: 80,
+    textAlign: "center",
+    //borderRight: "1px solid #949494",
+    float: "left",
+    paddingRight: "10px",
+  },
+  texto:{
+    float: 'left',
+    //padding: '20px',
+    
   },
 
 }));
@@ -93,10 +106,8 @@ const AppFooter = () => {
         <Grid container spacing={5}>
 
         <Grid  item xs={6} sm={4} md={3}>
-            <img  src={logoSism} alt="sism"  className={classes.logo}></img>
-          </Grid>
-        
-          
+            <img  src={logoSism} alt="sism"  className={classes.logotipo}></img>
+          </Grid>   
           
           <Grid /* container */ item xs={6} sm={4} md={5} className={classes.text}>
             <Typography marked="left" gutterBottom >
@@ -108,6 +119,7 @@ const AppFooter = () => {
           </Grid>
 
           <Grid item xs={6} sm={4} md={3}>
+            <Typography>Visita nuestras redes sociales</Typography>
             <Grid
               // container
               direction="column"
