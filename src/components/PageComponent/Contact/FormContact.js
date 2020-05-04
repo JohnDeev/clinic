@@ -1,7 +1,7 @@
 import React from "react";
 import { withFormik } from "formik";
 import * as Yup from "yup";
-import { withStyles } from "@material-ui/core";
+import { withStyles} from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
@@ -18,6 +18,11 @@ const styles = () => ({
     container: {
         display: "Flex",
         justifyContent: "center"
+    },
+
+    textContainer:{
+        display: "block",
+
     },
     actions: {
         float: "right"
@@ -42,9 +47,11 @@ const form = props => {
     return (
         
         <div className={classes.container}>
-            
+        
+             
             <form onSubmit={handleSubmit}>
                 
+       
                 <Card className={classes.card}>
                     <CardContent>
                         <TextField
