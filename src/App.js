@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import ButtonAppBar from './components/MaterialComponents/ButtonAppBar';
+/* import ButtonAppBar from './components/MaterialComponents/ButtonAppBar';
 import ContComponent from './components/PageComponent/ContComponent'
-import AppFooter from './components/MaterialComponents/AppFooter';
+import AppFooter from './components/MaterialComponents/AppFooter'; */
+import Principal from './components/PageComponent/Principal';
 import './App.css';
+import { Widget } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
 
 class App extends Component {
 
@@ -20,9 +24,8 @@ class App extends Component {
     console.log("render");
     return (
     <div className="App">
-          <ButtonAppBar ></ButtonAppBar>
-          <ContComponent></ContComponent>
-          <AppFooter></AppFooter>
+          <Principal></Principal>
+          <Widget></Widget>
     </div>
   )
   };  
