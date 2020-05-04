@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FrontPageLayout from './FrontPageLayout';
 
-import fachada from './../../../img/fachadasism.jpeg'
+import fachada from './../../../img/fachadasism3.jpg'
 
 
 const backgroundImage = fachada;

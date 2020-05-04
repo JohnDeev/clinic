@@ -31,8 +31,9 @@ const styles = theme => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.5,
+    //backgroundColor: theme.palette.common.black,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    //opacity: 0.5,
     zIndex: -1,
   },
   background: {
