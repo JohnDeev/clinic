@@ -123,7 +123,7 @@ const AppFooter = () => {
             <Grid
               // container
               direction="column"
-              justify="flex-end"
+              //justify="flex-end"
               className={classes.iconsWrapper}
               spacing={2}>
               <Grid item className={classes.icons}>

@@ -24,8 +24,8 @@ class App extends Component {
     console.log("render");
     return (
     <div className="App">
-          <Principal></Principal>
-          <Widget></Widget>
+          <Principal />
+          <Widget />
     </div>
   )
   };  

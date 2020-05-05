@@ -9,7 +9,7 @@ import Contact from './Contact/index';
 
 
 
-const ContComponent = props => {
+const ContComponent = () => {
 
     const renderHome =() =><Home></Home>;
     const renderAboutUs =()=><AboutUs></AboutUs>;
