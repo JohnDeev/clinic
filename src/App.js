@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-/* import ButtonAppBar from './components/MaterialComponents/ButtonAppBar';
-import ContComponent from './components/PageComponent/ContComponent'
-import AppFooter from './components/MaterialComponents/AppFooter'; */
-//import Principal from './components/PageComponent/Principal';
 import './App.css';
-//import { Widget } from 'react-chat-widget';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import 'react-chat-widget/lib/styles.css';
 import HomeContainer from './components/containers/HomeContainer';
 import AboutContainer from './components/containers/AboutContainer';
-//import HomeContainer from './components/containers/HomeContainer';
-import Contact from './components/PageComponent/Contact'
+import PortfolioContainer from './components/containers/PortfolioContainer';
+import ContactContainer from './components/containers/ContactContainer';
 
 class App extends Component {
 
@@ -19,9 +14,9 @@ class App extends Component {
 
   renderAbout =()=><AboutContainer/>;
 
-  renderPortfolio =()=><h1>Aca va el portafolio</h1>;
+  renderPortfolio =()=><PortfolioContainer />;
 
-  renderContact =()=><Contact></Contact>;
+  renderContact =()=><ContactContainer/>;
 
 
   render() {
