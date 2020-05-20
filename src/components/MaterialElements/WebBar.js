@@ -1,6 +1,5 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import {Link, BrowserRouter as Router} from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -9,9 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Button from '@material-ui/core/Button';
-import './styles.css'
-import ContComponent from './../PageComponent/ContComponent';
+import './../MaterialComponents/styles.css'
 
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
@@ -28,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    display: 'none',
+    display: 'block',
     /* [theme.breakpoints.up('sm')]: {
       display: 'block',
     }, */
@@ -84,10 +81,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonApBar() {
+export default function WebBar({children}) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl,  setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -107,6 +104,7 @@ export default function ButtonApBar() {
   };
 
   const handleMobileMenuOpen = (event) => {
+   
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
@@ -128,7 +126,7 @@ export default function ButtonApBar() {
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
-    <Router>
+    
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -138,33 +136,14 @@ export default function ButtonApBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Link to="/" className="enlaceMenu">
-        <MenuItem onClick={ContComponent()}>
-          <p>Inicio</p>
-        </MenuItem>
-      </Link>
-      <Link to="/quienessomos" className="enlaceMenu">
-        <MenuItem onClick={ContComponent()}>
-          <p>¿Quienes somos?</p>
-        </MenuItem>
-      </Link>
-      <Link to="/portafolio" className="enlaceMenu">
-        <MenuItem onClick={ContComponent()}>
-          <p>Portafolio</p>
-        </MenuItem>
-      </Link>
-      <Link to="/contacto" className="enlaceMenu">
-        <MenuItem onClick={ContComponent()}>
-          <p>Contacto</p>
-        </MenuItem>
-      </Link>
+      {children}
       
     </Menu>
-    </Router>
+    
   );
 
   return (
-    <Router>
+    
     <div className={classes.grow}>
       <AppBar position="fixed" className={classes.toolbarColor}>
         <Toolbar>
@@ -183,10 +162,7 @@ export default function ButtonApBar() {
           
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link to="/" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Inicio</Button></Link> 
-            <Link to="/quienessomos" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>¿Quienes somos?</Button></Link>
-            <Link to="/portafolio" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Portafolio</Button></Link>
-            <Link to="/contacto" className="enlaceMenu"><Button color="inherit" onClick={ContComponent()}>Contacto</Button></Link>
+            {children}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -205,6 +181,6 @@ export default function ButtonApBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
-    </Router>
+    
   );
 }

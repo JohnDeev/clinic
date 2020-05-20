@@ -117,11 +117,10 @@ const AppFooter = () => {
               Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
             </Typography>
           </Grid>
-
           <Grid item xs={6} sm={4} md={3}>
             <Typography>Visita nuestras redes sociales</Typography>
             <Grid
-              // container
+               container
               direction="column"
               //justify="flex-end"
               className={classes.iconsWrapper}
@@ -134,11 +133,8 @@ const AppFooter = () => {
                   <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon} />
                 </a>
               </Grid>
-
             </Grid>
           </Grid>
-          
-
         </Grid>
       </Container>
     </Typography>

@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import ImageBanner from './../MaterialComponents/ImageBanner';
+//import ImageBanner from './../MaterialComponents/ImageBanner';
 
 
 import mision from './../../img/misionTest.jpg';
@@ -74,7 +74,6 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <ImageBanner titulo='Nuestra empresa' />
       <Container >
         <Typography component="div" style={{ textAlign: 'justify' }}>
           <div className={classes.root}><h2>Misión</h2></div>
@@ -116,7 +115,7 @@ export default function AboutUs() {
             {/* End hero unit */}
             <Grid container spacing={6}>
               {infoPrincipios.map((item, key) => (
-                <Grid item key={item} xs={12} sm={6} md={4}>
+                <Grid item key={item.id} xs={12} sm={6} md={4}>
                   <Card className={classes.card}>
                     <CardContent className={classes.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">

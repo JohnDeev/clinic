@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 //import CssBaseline from '@material-ui/core/CssBaseline';
 
-import ImageBanner from './../MaterialComponents/ImageBanner';
+//import ImageBanner from './../MaterialComponents/ImageBanner';
 
 import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
 import medicinainterna from './../../img/portfolioImg/medicinainterna.png';
@@ -93,13 +93,13 @@ export default function Album() {
 
   return (
     <main>
-      <ImageBanner titulo='Nuestros servicios' img={ultrasonido} />
+    
           
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
       <Grid container spacing={6}>
         {infoPortfolio.map((item) => (
-          <Grid item key={item} xs={12} sm={6} md={4}>
+          <Grid item key={item.name} xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}

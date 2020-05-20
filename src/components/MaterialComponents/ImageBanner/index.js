@@ -8,7 +8,7 @@ import ImageBannerLayout from './ImageBannerLayout';
 
 const backgroundImage = 'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
-const styles = (theme) => ({
+const styles = (theme, url) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
     backgroundColor: '#7fc7d9', // Average color of the background image.
