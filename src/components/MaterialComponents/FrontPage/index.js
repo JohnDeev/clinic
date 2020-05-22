@@ -20,11 +20,19 @@ const styles = (theme) => ({
   button: {
     minWidth: 200,
   },
+  h2: {
+    marginBottom: theme.spacing(2),
+    fontSize: 40,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 62,
+    },
+  },
   h5: {
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(4),
     [theme.breakpoints.up('sm')]: {
       marginTop: theme.spacing(2),
+      
     },
   },
   more: {
@@ -39,7 +47,7 @@ function FrontPage(props) {
     <FrontPageLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       {/* <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" /> */}
-      <Typography color="inherit" align="center" variant="h2" marked="center">
+      <Typography color="inherit" align="center" variant="h2" marked="center" className={classes.h2}>
         Servicios Integrales de Salud del Magdalena
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>

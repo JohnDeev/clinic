@@ -1,18 +1,12 @@
 import React from 'react';
-// eslint-disable-next-line
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-// eslint-disable-next-line
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-//import CssBaseline from '@material-ui/core/CssBaseline';
-
-//import ImageBanner from './../MaterialComponents/ImageBanner';
+import { Fade } from '@material-ui/core';
 
 import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
 import medicinainterna from './../../img/portfolioImg/medicinainterna.png';
@@ -33,7 +27,6 @@ import otorrinolaringologia from './../../img/portfolioImg/otorrinolaringologia.
 import urologia from './../../img/portfolioImg/urologia.png';
 import dermatologia from './../../img/portfolioImg/dermatologia.jpg';
 import ultrasonido from './../../img/portfolioImg/ultrasonido.jpg';
-
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -90,16 +83,22 @@ const infoPortfolio=[
 
 export default function Album() {
   const classes = useStyles();
+  const [checked] = React.useState(true);
 
   return (
     <main>
-    
-          
+             
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
+      
       <Grid container spacing={6}>
         {infoPortfolio.map((item) => (
           <Grid item key={item.name} xs={12} sm={6} md={4}>
+            <Fade
+          in={checked}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(checked ? { timeout: 1000 } : {})}
+        >
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
@@ -120,9 +119,11 @@ export default function Album() {
                 </Button>
               </CardActions> */}
             </Card>
+            </Fade>
           </Grid>
         ))}
       </Grid>
+      
     </Container>
   </main>
   );

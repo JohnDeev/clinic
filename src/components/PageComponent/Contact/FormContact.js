@@ -125,7 +125,6 @@ const form = props => {
                     </CardActions>
                 </Card>
             </form>
-
         </div>
 
     );

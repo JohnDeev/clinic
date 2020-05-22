@@ -18,7 +18,7 @@ const styles = (theme, url) => ({
     minWidth: 200,
   },
   h5: {
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(3),
     marginTop: theme.spacing(11),
     [theme.breakpoints.up('sm')]: {
       marginTop: theme.spacing(10),
@@ -39,7 +39,7 @@ const ImageBanner = props => {
       {/* <Typography color="inherit" align="center" variant="h2" marked="center">
         Servicios Integrales de Salud del Magdalena
       </Typography> */}
-      <Typography color="inherit" align="center" variant="h3" className={classes.h5}>
+      <Typography color="inherit" align="center" variant="h4" className={classes.h5}>
         {titulo}
       </Typography>
     </ImageBannerLayout>
