@@ -8,6 +8,7 @@ import Portfolio from '../PageComponent/Portfolio';
 //import Typography from '@material-ui/core/Typography';
 //import LoremIpsum from 'react-lorem-ipsum';
 import WebBar from './../MaterialElements/WebBar';
+import ImageBanner from '../MaterialComponents/ImageBanner';
 
 class PortfolioContainer extends Component {
 
@@ -35,12 +36,14 @@ class PortfolioContainer extends Component {
     render() {
         return (
             <div>
-                <AppFrame header = 'Nuestra empresa'
+                <AppFrame 
+                
+                header = {<ImageBanner titulo="Nuestros servicios" />}
                 bar={
                     <div>
                         <WebBar>
                         <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                        <Button color="inherit" onClick={this.handleOnClickAbout}>Quienes somos</Button>
+                        <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                         <Button color="inherit" onClick={this.handleOnClickPortFolio}>Portafolio</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
                         </WebBar>
@@ -55,9 +58,5 @@ class PortfolioContainer extends Component {
         );
     }
 }
-/* 
-HomeContainer.propTypes = {
-
-}; */
 
 export default withRouter(PortfolioContainer);

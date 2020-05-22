@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
 import { withRouter} from 'react-router-dom';
-//import WebBar from './../MaterialElements/WebBar';
 import {Button} from '@material-ui/core';
 import AppFrame from '../AppFrame';
 import Contact from '../PageComponent/Contact';
-//import Typography from '@material-ui/core/Typography';
-//import LoremIpsum from 'react-lorem-ipsum';
 import WebBar from './../MaterialElements/WebBar';
+import ImageBanner from '../MaterialComponents/ImageBanner';
 
 class ContactContainer extends Component {
 
@@ -35,12 +32,14 @@ class ContactContainer extends Component {
     render() {
         return (
             <div>
-                <AppFrame header = 'Nuestra empresa'
+                <AppFrame 
+                
+                header = {<ImageBanner titulo="Contáctenos" />}
                 bar={
                     <div>
                         <WebBar>
                         <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                        <Button color="inherit" onClick={this.handleOnClickAbout}>Quienes somos</Button>
+                        <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                         <Button color="inherit" onClick={this.handleOnClickPortFolio}>Portafolio</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
                         </WebBar>
@@ -55,9 +54,5 @@ class ContactContainer extends Component {
         );
     }
 }
-/* 
-HomeContainer.propTypes = {
-
-}; */
 
 export default withRouter(ContactContainer);

@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
 import { withRouter} from 'react-router-dom';
-//import WebBar from './../MaterialElements/WebBar';
 import {Button} from '@material-ui/core';
 import AppFrame from '../AppFrame';
-//import Portfolio from '../PageComponent/Portfolio';
-//import Typography from '@material-ui/core/Typography';
-//import LoremIpsum from 'react-lorem-ipsum';
 import WebBar from './../MaterialElements/WebBar';
 import AboutUs from '../PageComponent/AboutUs';
+import ImageBanner from '../MaterialComponents/ImageBanner';
 
 class AboutContainer extends Component {
 
@@ -36,12 +32,14 @@ class AboutContainer extends Component {
     render() {
         return (
             <div>
-                <AppFrame header = 'Nuestra empresa'
+                <AppFrame 
+                
+                header = {<ImageBanner titulo="Nuestra empresa" />}
                 bar={
                     <div>
                         <WebBar>
                         <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                        <Button color="inherit" onClick={this.handleOnClickAbout}>Quienes somos</Button>
+                        <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                         <Button color="inherit" onClick={this.handleOnClickPortFolio}>Portafolio</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
                         </WebBar>
@@ -56,9 +54,5 @@ class AboutContainer extends Component {
         );
     }
 }
-/* 
-HomeContainer.propTypes = {
-
-}; */
 
 export default withRouter(AboutContainer);

@@ -1,51 +1,26 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-
 import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook'
-
-import './styles.css';
-
+import FacebookIcon from '@material-ui/icons/Facebook';
 import logoSism from './../../img/logo_sism.png';
-
-
-// eslint-disable-next-line
-const Copyright = () => {
-  return (
-    <React.Fragment>
-      {'© '}
-      <Link color="inherit" href="https://material-ui.com/">
-        SISM
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </React.Fragment>
-  );
-}
+import './styles.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    //backgroundColor: '#808080',
+    flexGrow: 1,
   },
   container: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(5),
-    display: 'flex',
-    alignItems: 'center',
-    marginLeft: theme.spacing(14),
-
+    padding: 20,
   },
   iconsWrapper: {
     height: 20,
+    float: "center",
   },
   icons: {
-    display: 'flex',
+    display: 'inline-flex',
   },
-  logo:{
+  logo: {
     width: 245,
     height: 80,
     justifyContent: 'center',
@@ -57,87 +32,44 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: theme.palette.warning.main,
-
     marginRight: theme.spacing(1),
-    '&:hover': {
-    //backgroundColor: theme.palette.warning.dark,
-    },
+
   },
-  text: {
-    display: 'hover',
-    justifyContent: 'justify',
-    alignItems: 'justify',
-    paddingTop: '20px',
-    //marginLeft: theme.spacing(6),
-    
-  },
-  list: {
-    margin: 0,
-    listStyle: 'none',
-    padding: 0,
-  },
-  listItem: {
-    paddingTop: theme.spacing(0.5),
-    paddingBottom: theme.spacing(0.5),
-  },
-  logotipo:{
-    width: 245,
+
+  logotipo: {
+    width: 220,
     height: 80,
-    textAlign: "center",
-    //borderRight: "1px solid #949494",
-    float: "left",
-    paddingRight: "10px",
-  },
-  texto:{
-    float: 'left',
-    //padding: '20px',
-    
+
   },
 
 }));
 
 const AppFooter = () => {
   const classes = useStyles();
-
   return (
-    <Typography component="footer" className={classes.root}>
-      <Container className={classes.container}>
-        <Grid container spacing={5}>
-
-        <Grid  item xs={6} sm={4} md={3}>
-            <img  src={logoSism} alt="sism"  className={classes.logotipo}></img>
-          </Grid>   
-          
-          <Grid /* container */ item xs={6} sm={4} md={5} className={classes.text}>
-            <Typography marked="left" gutterBottom >
-              Carrera 19 No. 26B - 53 Barrio Los Naranjos
-            </Typography>
-            <Typography marked="left" gutterBottom >
-              Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
-            </Typography>
-          </Grid>
-          <Grid item xs={6} sm={4} md={3}>
-            <Typography>Visita nuestras redes sociales</Typography>
-            <Grid
-               container
-              direction="column"
-              //justify="flex-end"
-              className={classes.iconsWrapper}
-              spacing={2}>
-              <Grid item className={classes.icons}>
-                <a href="https://www.facebook.com/sism.ips" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
-                  <FacebookIcon style={{ fontSize: 40, color: "#3b5998" }} className={classes.icon} />
-                </a>
-                <a href="https://twitter.com/ipssism" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
-                  <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon} />
-                </a>
-              </Grid>
+    <div className={classes.root}>
+      <Grid container>
+        <Grid item xs={12} sm={2} className={classes.container}>
+          <img src={logoSism} alt="sism" className={classes.logotipo}></img>
+        </Grid>
+        <Grid item xs={12} sm={8} className={classes.container}>
+          Carrera 19 No. 26B - 53 Barrio Los Naranjos <br /> Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
+      </Grid>
+        <Grid item xs={12} sm={2} className={classes.container}>
+          Visita nuestras redes sociales
+      <Grid className={classes.iconsWrapper}>
+            <Grid item className={classes.icons}>
+              <a href="https://www.facebook.com/sism.ips" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
+                <FacebookIcon style={{ fontSize: 40, color: "#3b5998" }} className={classes.icon} />
+              </a>
+              <a href="https://twitter.com/ipssism" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
+                <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon} />
+              </a>
             </Grid>
           </Grid>
         </Grid>
-      </Container>
-    </Typography>
+      </Grid>
+    </div>
   );
 };
 

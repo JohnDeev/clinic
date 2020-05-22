@@ -1,14 +1,12 @@
 import React from "react";
 import { withFormik } from "formik";
 import * as Yup from "yup";
-import { withStyles} from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-
-
 
 const styles = () => ({
     card: {
@@ -20,7 +18,7 @@ const styles = () => ({
         justifyContent: "center"
     },
 
-    textContainer:{
+    textContainer: {
         display: "block",
 
     },
@@ -45,13 +43,9 @@ const form = props => {
     } = props;
 
     return (
-        
+
         <div className={classes.container}>
-        
-             
             <form onSubmit={handleSubmit}>
-                
-       
                 <Card className={classes.card}>
                     <CardContent>
                         <TextField
@@ -108,7 +102,7 @@ const form = props => {
                         <TextField
                             id="comment"
                             label="Comentario"
-                            value={values.comment}//Acá está el problema
+                            value={values.comment}
                             onChange={handleChange}
                             onBlur={handleBlur}
                             helperText={touched.comment ? errors.comment : ""}
@@ -122,7 +116,7 @@ const form = props => {
 
                     </CardContent>
                     <CardActions className={classes.actions}>
-                        <Button type="submit" color="primary" disabled={isSubmitting}>
+                        <Button type="submit" color="primary" disabled={isSubmitting} >
                             Enviar
                         </Button>
                         <Button color="secondary" onClick={handleReset}>
@@ -131,9 +125,9 @@ const form = props => {
                     </CardActions>
                 </Card>
             </form>
-        
+
         </div>
-        
+
     );
 };
 
@@ -167,7 +161,7 @@ const FormContact = withFormik({
     handleSubmit: (values, { setSubmitting }) => {
         setTimeout(() => {
             // submit to the server
-            alert(JSON.stringify(values, null, 2));
+            console.log(JSON.stringify(values, null, 2));
             setSubmitting(false);
         }, 1000);
     }

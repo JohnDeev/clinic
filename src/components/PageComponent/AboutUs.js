@@ -31,13 +31,14 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     margin: 'auto',
-    display: 'block',
+    display: 'inline-center',
     /*     maxWidth: '100%',
         maxHeight: '100%', */
     width: 256,
     height: 256,
     borderRadius: '50%',
     justifyContent: "center",
+    
   },
   card: {
     height: '100%',
