@@ -7,10 +7,12 @@ import AppFrame from '../AppFrame';
 //import Portfolio from '../PageComponent/Portfolio';
 //import Typography from '@material-ui/core/Typography';
 //import LoremIpsum from 'react-lorem-ipsum';
-import Home from '../PageComponent/Home';
+import Home from '../views/Home';
 //import WebActions from '../WebActions';
 import FrontPage from './../MaterialComponents/FrontPage';
-import WebBar from './../MaterialElements/WebBar';
+import WebBar from '../MaterialComponents/WebBar';
+
+import fachada from './../../img/fachadasism2.jpg'
 
 class HomeContainer extends Component {
 
@@ -40,7 +42,7 @@ class HomeContainer extends Component {
             <div>
                 <AppFrame 
                 
-                header ={<FrontPage/>}
+                header ={<FrontPage imagen={fachada}/>}
                 bar={
                     <div>
                         <WebBar>

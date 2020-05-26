@@ -4,11 +4,13 @@ import { withRouter} from 'react-router-dom';
 //import WebBar from './../MaterialElements/WebBar';
 import {Button} from '@material-ui/core';
 import AppFrame from '../AppFrame';
-import Portfolio from '../PageComponent/Portfolio';
+import Portfolio from '../views/Portfolio';
 //import Typography from '@material-ui/core/Typography';
 //import LoremIpsum from 'react-lorem-ipsum';
-import WebBar from './../MaterialElements/WebBar';
+import WebBar from '../MaterialComponents/WebBar';
 import ImageBanner from '../MaterialComponents/ImageBanner';
+
+import enfermeria from './../../img/portfolioImg/enfermeria.jpg';
 
 class PortfolioContainer extends Component {
 
@@ -38,7 +40,7 @@ class PortfolioContainer extends Component {
             <div>
                 <AppFrame 
                 
-                header = {<ImageBanner titulo="Nuestros servicios" />}
+                header = {<ImageBanner titulo="Nuestros servicios" imagen={enfermeria} />}
                 bar={
                     <div>
                         <WebBar>

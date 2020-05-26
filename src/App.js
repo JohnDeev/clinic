@@ -7,9 +7,7 @@ import HomeContainer from './components/containers/HomeContainer';
 import AboutContainer from './components/containers/AboutContainer';
 import PortfolioContainer from './components/containers/PortfolioContainer';
 import ContactContainer from './components/containers/ContactContainer';
-import {AnimatedSwitch, spring} from 'react-router-transition';
-
-
+import {AnimatedSwitch} from 'react-router-transition';
 
 class App extends Component {
 
@@ -20,23 +18,16 @@ class App extends Component {
   renderPortfolio =()=><PortfolioContainer />;
 
   renderContact =()=><ContactContainer/>;
-  
-  glide(val) {
-    return spring(val, {
-      stiffness: 174,
-      damping: 24,
-    });
-  }
-  
+
 
   render() {
     console.log("render");
     return (
       <Router>
         <AnimatedSwitch 
-        atEnter={{offset:100}}
-        atLeave={{offset: this.glide(-100)}}
-        atActive={{offset:this.glide(0)}}
+        atEnter={{opacity:0}}
+        atLeave={{opacity:0}}
+        atActive={{opacity:1}}
         className="App">
         <Route exact path="/" component={this.renderHome}></Route>
         <Route exact path="/quienessomos" component={this.renderAbout}></Route>

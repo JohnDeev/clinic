@@ -6,14 +6,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FrontPageLayout from './FrontPageLayout';
 
-import fachada from './../../../img/fachadasism2.jpg'
-
-
-const backgroundImage = fachada;
-
 const styles = (theme) => ({
   background: {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: props =>`url(${props.imagen})`,
     backgroundColor: '#7fc7d9', // Average color of the background image.
     backgroundPosition: 'center',
   },

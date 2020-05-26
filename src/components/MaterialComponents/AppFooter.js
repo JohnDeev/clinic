@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import logoSism from './../../img/logo_sism.png';
+import logoSism from './../../img/logosismcompleto2015.png';
 import './styles.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,8 +37,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   logotipo: {
-    width: 220,
-    height: 80,
+    width: 300,
+    height: 100,
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: 40
+    },
+    
 
   },
 

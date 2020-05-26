@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { withRouter} from 'react-router-dom';
 import {Button} from '@material-ui/core';
 import AppFrame from '../AppFrame';
-import WebBar from './../MaterialElements/WebBar';
-import AboutUs from '../PageComponent/AboutUs';
+import WebBar from '../MaterialComponents/WebBar';
+import AboutUs from '../views/AboutUs';
 import ImageBanner from '../MaterialComponents/ImageBanner';
+
+import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
 
 class AboutContainer extends Component {
 
@@ -34,7 +36,7 @@ class AboutContainer extends Component {
             <div>
                 <AppFrame 
                 
-                header = {<ImageBanner titulo="Nuestra empresa" />}
+                header = {<ImageBanner titulo="Nuestra empresa" imagen={medicinageneral} />}
                 bar={
                     <div>
                         <WebBar>

@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-// eslint-disable-next-line
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ImageBannerLayout from './ImageBannerLayout';
 
-const backgroundImage = 'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
-const styles = (theme, url) => ({
+const styles = (theme) => ({
   background: {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: props => `url(${props.imagen})`,
     backgroundColor: '#7fc7d9', // Average color of the background image.
     backgroundPosition: 'center',
   },
