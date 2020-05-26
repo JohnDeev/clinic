@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Fade } from '@material-ui/core';
 
 import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
 import medicinainterna from './../../img/portfolioImg/medicinainterna.png';
@@ -83,7 +82,6 @@ const infoPortfolio=[
 
 export default function Album() {
   const classes = useStyles();
-  const [checked] = React.useState(true);
 
   return (
     <main>
@@ -94,11 +92,7 @@ export default function Album() {
       <Grid container spacing={6}>
         {infoPortfolio.map((item) => (
           <Grid item key={item.name} xs={12} sm={6} md={4}>
-            <Fade
-          in={checked}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(checked ? { timeout: 1000 } : {})}
-        >
+         
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
@@ -119,7 +113,6 @@ export default function Album() {
                 </Button>
               </CardActions> */}
             </Card>
-            </Fade>
           </Grid>
         ))}
       </Grid>
