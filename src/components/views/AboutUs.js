@@ -51,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
+  texto:{
+    textAlign: "justify",
+  }
 }));
 
 
@@ -76,16 +79,16 @@ export default function AboutUs() {
     <React.Fragment>
       <CssBaseline />
       <Container >
-        <Typography component="div" style={{ textAlign: 'justify' }}>
-          <div className={classes.root}><h2>Misión</h2></div>
+
+          <div className={classes.root}><h2 className={classes.texto}>Misión</h2></div>
           <Grid container spacing={1} alignItems="center">
-            <Grid item>
-              <div><img className={classes.img} alt="mision" src={mision} /></div>
+            <Grid item  >
+              <img className={classes.img} alt="mision" src={mision}  />
             </Grid>
             <Grid item xs={12} sm container>
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
-                  <Typography>
+                  <Typography className={classes.texto}>
                     SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una Institución Prestadora de Servicios de Salud privada,
                     orientada a satisfacer las necesidades en salud de nuestros clientes, de manera eficaz y eficiente, apoyados
                     en un Talento Humano Competente, en aras de mejorar su calidad de vida.
@@ -94,7 +97,7 @@ export default function AboutUs() {
               </Grid>
             </Grid>
           </Grid>
-          <div className={classes.root}><h2>Visión</h2></div>
+          <div className={classes.root}><h2 className={classes.texto}>Visión</h2></div>
           <Grid container spacing={1} alignItems="center" direction="row-reverse">
             <Grid item>
               <div><img className={classes.img} alt="mision" src={vision} /></div>
@@ -102,7 +105,7 @@ export default function AboutUs() {
             <Grid item xs={12} sm container>
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
-                  <Typography>
+                  <Typography className={classes.texto}>
                     Ser identificados y reconocidos, en el año 2017, como una de las mejores Instituciones Prestadoras de Servicios
                     de Salud en la región caribe, impactando en la Satisfacción de nuestros Clientes, el bienestar de nuestro Talento
                     Humano y la Rentabilidad Económica de la Empresa.
@@ -119,10 +122,10 @@ export default function AboutUs() {
                 <Grid item key={item.id} xs={12} sm={6} md={4}>
                   <Card className={classes.card}>
                     <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography gutterBottom variant="h5" component="h2" className={classes.texto}>
                         {item.name}
                       </Typography>
-                      <Typography>
+                      <Typography className={classes.texto}>
                         {item.description}
                       </Typography>
                     </CardContent>
@@ -131,7 +134,7 @@ export default function AboutUs() {
               ))}
             </Grid>
           </Container>
-        </Typography>
+        
       </Container>
     </React.Fragment>
   );

@@ -8,6 +8,7 @@ import AppFrame from '../AppFrame';
 //import Typography from '@material-ui/core/Typography';
 //import LoremIpsum from 'react-lorem-ipsum';
 import Home from '../views/Home';
+import EnterpriseValue from '../views/EnterpriseValue';
 //import WebActions from '../WebActions';
 import FrontPage from './../MaterialComponents/FrontPage';
 import WebBar from '../MaterialComponents/WebBar';
@@ -55,7 +56,8 @@ class HomeContainer extends Component {
                 }
                 body={
                     <div>
-                        <Home></Home>
+                        <EnterpriseValue/>
+                        <Home/>
                     </div>
                 } />
             </div>
