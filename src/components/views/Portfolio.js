@@ -7,27 +7,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
-import medicinainterna from './../../img/portfolioImg/medicinainterna.png';
-import ginescostetricia from './../../img/portfolioImg/ginescostetricia.jpg';
-import pediatria from './../../img/portfolioImg/pediatria.png';
-import enfermeria from './../../img/portfolioImg/enfermeria.jpg';
-import promocionensalud from './../../img/portfolioImg/promocionensalud.jpg';
-import planificacionfamiliar from './../../img/portfolioImg/planificacionfamiliar.jpg';
-import nutricionydietetica from './../../img/portfolioImg/nutricionydietetica.jpg';
-import psicologia from './../../img/portfolioImg/psicologia.jpeg';
-import laboratorioclinico from './../../img/portfolioImg/laboratorioclinico.jpg';
-import tomademuestradelaboratorioclinico from './../../img/portfolioImg/tomademuestradelaboratorioclinico.jpg';
-import endocrinologia from './../../img/portfolioImg/endocrinologia.jpg';
-import gastroenterologia from './../../img/portfolioImg/gastroenterologia.jpg';
-import neumologia from './../../img/portfolioImg/neumologia.jpg';
-import neurologia from './../../img/portfolioImg/neurologia.jpg';
-import otorrinolaringologia from './../../img/portfolioImg/otorrinolaringologia.jpg';
-import urologia from './../../img/portfolioImg/urologia.png';
-import dermatologia from './../../img/portfolioImg/dermatologia.jpg';
-import ultrasonido from './../../img/portfolioImg/ultrasonido.jpg';
+import {infoPortfolio} from './../../const/infos';
+
 
 const useStyles = makeStyles((theme) => ({
+  texto:{
+    textAlign: "justify",
+    paddingBottom: 15,
+  },
   icon: {
     marginRight: theme.spacing(2),
   },
@@ -56,29 +43,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const infoPortfolio=[
-
-{name:'Medicina General', image:medicinageneral, description: '1'},
-{name:'Medicina Interna', image:medicinainterna, description: '2'},
-{name:'Ginescostetricia', image:ginescostetricia, description: '3'},
-{name:'Pediatria', image:pediatria, description: '4'},
-{name:'Enfermería', image:enfermeria, description: '5'},
-{name:'Promoción en salud', image:promocionensalud, description: '6'},
-{name:'Planificación familiar', image:planificacionfamiliar, description: '7'},
-{name:'Nutrición y dietética', image:nutricionydietetica, description: '8'},
-{name:'Psicología', image:psicologia, description: '9'},
-{name:'Laboratorio clínico', image:laboratorioclinico, description: '10'},
-{name:'Toma de muestras de laboratorio clínico', image:tomademuestradelaboratorioclinico, description: '11'},
-{name:'Endocrinología', image:endocrinologia, description: '12'},
-{name:'Gastroenterología', image:gastroenterologia, description: '13'},
-{name:'Neumología', image:neumologia, description: '14'},
-{name:'Neurología', image:neurologia, description: '15'},
-{name:'Otorrinolaringología', image:otorrinolaringologia, description: '16'},
-{name:'Urología', image:urologia, description: '17'},
-{name:'Dermatología', image:dermatologia, description: '18'},
-{name:'Ultrasonido', image:ultrasonido, description: '19'},
-
-]
 
 export default function Album() {
   const classes = useStyles();
@@ -88,7 +52,7 @@ export default function Album() {
              
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
-      
+      <Typography className={classes.texto}>Como Institución prestadora de servicios de salud ofrecemos servicios de I y  II Nivel de Complejidad de tipo ambulatorio, enmarcados en un modelo familiar como su eje y objetivo.</Typography>
       <Grid container spacing={6}>
         {infoPortfolio.map((item) => (
           <Grid item key={item.name} xs={12} sm={6} md={4}>

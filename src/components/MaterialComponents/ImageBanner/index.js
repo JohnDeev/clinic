@@ -11,9 +11,6 @@ const styles = (theme) => ({
     backgroundColor: '#7fc7d9', // Average color of the background image.
     backgroundPosition: 'center',
   },
-  button: {
-    minWidth: 200,
-  },
   h5: {
     marginBottom: theme.spacing(3),
     marginTop: theme.spacing(11),
@@ -32,10 +29,7 @@ const ImageBanner = props => {
   return (
     <ImageBannerLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
-      {/* <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-      {/* <Typography color="inherit" align="center" variant="h2" marked="center">
-        Servicios Integrales de Salud del Magdalena
-      </Typography> */}
+      {/* <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />*/}
       <Typography color="inherit" align="center" variant="h4" className={classes.h5}>
         {titulo}
       </Typography>
@@ -46,6 +40,7 @@ const ImageBanner = props => {
 ImageBanner.propTypes = {
   classes: PropTypes.object.isRequired,
   titulo: PropTypes.string.isRequired,
+  imagen: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(ImageBanner);
