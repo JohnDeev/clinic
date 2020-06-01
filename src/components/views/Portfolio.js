@@ -9,6 +9,15 @@ import Container from '@material-ui/core/Container';
 
 import {infoPortfolio} from './../../const/infos';
 
+import Zoom from 'react-reveal/Zoom';
+
+/* import styled, {keyframes} from 'styled-components';
+import {fadeIn} from 'react-animations';
+
+
+const FadeIn = styled.div `animation: 1s ${keyframes `${fadeIn}`}`; */
+
+
 
 const useStyles = makeStyles((theme) => ({
   texto:{
@@ -41,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
+
+  solveCard:{
+    maxWidth: 'fixed',
+    height: '100%',
+
+  },
 }));
 
 
@@ -53,10 +68,12 @@ export default function Album() {
        <Container className={classes.cardGrid} >
       {/* End hero unit */}
       <Typography className={classes.texto}>Como Institución prestadora de servicios de salud ofrecemos servicios de I y  II Nivel de Complejidad de tipo ambulatorio, enmarcados en un modelo familiar como su eje y objetivo.</Typography>
+
       <Grid container spacing={6}>
         {infoPortfolio.map((item) => (
           <Grid item key={item.name} xs={12} sm={6} md={4}>
-         
+            <Zoom cascade>
+            <div className={classes.solveCard}> 
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
@@ -77,10 +94,12 @@ export default function Album() {
                 </Button>
               </CardActions> */}
             </Card>
+            </div>
+            </Zoom>
           </Grid>
+          
         ))}
       </Grid>
-      
     </Container>
   </main>
   );
