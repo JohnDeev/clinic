@@ -12,6 +12,8 @@ import {infoPrincipios} from './../../const/infos';
 import mision from './../../img/misionTest.jpg';
 import vision from './../../img/visionTest.jpg';
 
+import Zoom from 'react-reveal/Zoom';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -43,7 +45,11 @@ const useStyles = makeStyles((theme) => ({
   },
   texto:{
     textAlign: "justify",
-  }
+  },
+  solveCard:{
+    maxWidth: 'fixed',
+    height: '100%',
+  },
 }));
 
 export default function AboutUs() {
@@ -86,6 +92,8 @@ export default function AboutUs() {
             <Grid container spacing={6}>
               {infoPrincipios.map((item, key) => (
                 <Grid item key={item.id} xs={12} sm={6} md={4}>
+                  <Zoom cascade>
+                  <div className={classes.solveCard}> 
                   <Card className={classes.card}>
                     <CardContent className={classes.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2" className={classes.texto}>
@@ -96,6 +104,8 @@ export default function AboutUs() {
                       </Typography>
                     </CardContent>
                   </Card>
+                  </div>
+                  </Zoom>
                 </Grid>
               ))}
             </Grid>
