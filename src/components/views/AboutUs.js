@@ -13,6 +13,7 @@ import mision from './../../img/misionTest.jpg';
 import vision from './../../img/visionTest.jpg';
 
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,11 +60,10 @@ export default function AboutUs() {
     <React.Fragment>
       <CssBaseline />
       <Container >
-
+        <Fade>
           <div className={classes.root}><h2 className={classes.texto}>Misión</h2></div>
           <Grid container spacing={1} alignItems="center">
             <Grid item >
-              <img className={classes.img} alt="mision" src={mision}  />
             </Grid>
             <Grid item xs={12} sm container>
             <Typography className={classes.texto}>
@@ -73,6 +73,8 @@ export default function AboutUs() {
                 </Typography>
             </Grid>
           </Grid>
+          </Fade>
+          <Fade>
           <div className={classes.root}><h2 className={classes.texto}>Visión</h2></div>
           <Grid container spacing={1} alignItems="center" direction="row-reverse">
             <Grid item>
@@ -86,6 +88,7 @@ export default function AboutUs() {
                 </Typography>
             </Grid>
           </Grid>
+          </Fade>
           <h2>Principios Corporativos</h2>
           <Container className={classes.cardGrid} >
             {/* End hero unit */}
