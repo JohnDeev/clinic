@@ -7,17 +7,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import {infoPortfolio} from './../../const/infos';
+import { infoPortfolio } from './../../const/infos';
 
 import Zoom from 'react-reveal/Zoom';
 
-/* import styled, {keyframes} from 'styled-components';
-import {fadeIn} from 'react-animations';
-
-const FadeIn = styled.div `animation: 1s ${keyframes `${fadeIn}`}`; */
 
 const useStyles = makeStyles((theme) => ({
-  texto:{
+  texto: {
     textAlign: "justify",
     paddingBottom: 15,
   },
@@ -48,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  solveCard:{
+  solveCard: {
     maxWidth: 'fixed',
     height: '100%',
 
@@ -61,43 +57,34 @@ export default function Album() {
 
   return (
     <main>
-             
-       <Container className={classes.cardGrid} >
-      {/* End hero unit */}
-      <Typography className={classes.texto}>Como Institución prestadora de servicios de salud ofrecemos servicios de I y  II Nivel de Complejidad de tipo ambulatorio, enmarcados en un modelo familiar como su eje y objetivo.</Typography>
 
-      <Grid container spacing={6}>
-        {infoPortfolio.map((item) => (
-          <Grid item key={item.name} xs={12} sm={6} md={4}>
-            <Zoom cascade>
-            <div className={classes.solveCard}> 
-            <Card className={classes.card}>
-              <CardMedia
-                className={classes.cardMedia}
-                image={item.image}
-                title="Image title"
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {item.name}
-                </Typography>
-                {/* <Typography>
-                    {item.description}                
-                </Typography> */}
-              </CardContent>
-              {/* <CardActions>
-                <Button size="small" color="primary">
-                  View
-                </Button>
-              </CardActions> */}
-            </Card>
-            </div>
-            </Zoom>
-          </Grid>
-          
-        ))}
-      </Grid>
-    </Container>
-  </main>
+      <Container className={classes.cardGrid} >
+        {/* End hero unit */}
+        <Typography className={classes.texto}>Como Institución prestadora de servicios de salud ofrecemos servicios de I y  II Nivel de Complejidad de tipo ambulatorio, enmarcados en un modelo familiar como su eje y objetivo.</Typography>
+
+        <Grid container spacing={6}>
+          {infoPortfolio.map((item) => (
+            <Grid item key={item.name} xs={12} sm={6} md={4}>
+              <Zoom cascade>
+                <div className={classes.solveCard}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image={item.image}
+                      title="Image title"
+                    />
+                    <CardContent className={classes.cardContent}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {item.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </div>
+              </Zoom>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </main>
   );
 }

@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import {infoPrincipios} from './../../const/infos';
+import { infoPrincipios } from './../../const/infos';
 
 import mision from './../../img/misionTest.jpg';
 import vision from './../../img/visionTest.jpg';
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     width: 256,
     height: 256,
     borderRadius: '50%',
-    
+
   },
   card: {
     height: '100%',
@@ -44,10 +44,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
-  texto:{
+  texto: {
     textAlign: "justify",
   },
-  solveCard:{
+  solveCard: {
     maxWidth: 'fixed',
     height: '100%',
   },
@@ -60,21 +60,22 @@ export default function AboutUs() {
     <React.Fragment>
       <CssBaseline />
       <Container >
-        <Fade>
+        <Fade left>
           <div className={classes.root}><h2 className={classes.texto}>Misión</h2></div>
           <Grid container spacing={1} alignItems="center">
             <Grid item >
+              <img className={classes.img} alt="mision" src={mision} />
             </Grid>
             <Grid item xs={12} sm container>
-            <Typography className={classes.texto}>
-                    SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una Institución Prestadora de Servicios de Salud privada,
-                    orientada a satisfacer las necesidades en salud de nuestros clientes, de manera eficaz y eficiente, apoyados
-                    en un Talento Humano Competente, en aras de mejorar su calidad de vida.
+              <Typography className={classes.texto}>
+                SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una Institución Prestadora de Servicios de Salud privada,
+                orientada a satisfacer las necesidades en salud de nuestros clientes, de manera eficaz y eficiente, apoyados
+                en un Talento Humano Competente, en aras de mejorar su calidad de vida.
                 </Typography>
             </Grid>
           </Grid>
-          </Fade>
-          <Fade>
+        </Fade>
+        <Fade right>
           <div className={classes.root}><h2 className={classes.texto}>Visión</h2></div>
           <Grid container spacing={1} alignItems="center" direction="row-reverse">
             <Grid item>
@@ -82,38 +83,38 @@ export default function AboutUs() {
             </Grid>
             <Grid item xs={12} sm container>
               <Typography className={classes.texto}>
-                    Ser identificados y reconocidos, en el año 2017, como una de las mejores Instituciones Prestadoras de Servicios
-                    de Salud en la región caribe, impactando en la Satisfacción de nuestros Clientes, el bienestar de nuestro Talento
-                    Humano y la Rentabilidad Económica de la Empresa.
+                Ser identificados y reconocidos, en el año 2017, como una de las mejores Instituciones Prestadoras de Servicios
+                de Salud en la región caribe, impactando en la Satisfacción de nuestros Clientes, el bienestar de nuestro Talento
+                Humano y la Rentabilidad Económica de la Empresa.
                 </Typography>
             </Grid>
           </Grid>
-          </Fade>
-          <h2>Principios Corporativos</h2>
-          <Container className={classes.cardGrid} >
-            {/* End hero unit */}
-            <Grid container spacing={6}>
-              {infoPrincipios.map((item, key) => (
-                <Grid item key={item.id} xs={12} sm={6} md={4}>
-                  <Zoom cascade>
-                  <div className={classes.solveCard}> 
-                  <Card className={classes.card}>
-                    <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="h5" component="h2" className={classes.texto}>
-                        {item.name}
-                      </Typography>
-                      <Typography className={classes.texto}>
-                        {item.description}
-                      </Typography>
-                    </CardContent>
-                  </Card>
+        </Fade>
+        <h2>Principios Corporativos</h2>
+        <Container className={classes.cardGrid} >
+          {/* End hero unit */}
+          <Grid container spacing={6}>
+            {infoPrincipios.map((item, key) => (
+              <Grid item key={item.id} xs={12} sm={6} md={4}>
+                <Zoom cascade>
+                  <div className={classes.solveCard}>
+                    <Card className={classes.card}>
+                      <CardContent className={classes.cardContent}>
+                        <Typography gutterBottom variant="h5" component="h2" className={classes.texto}>
+                          {item.name}
+                        </Typography>
+                        <Typography className={classes.texto}>
+                          {item.description}
+                        </Typography>
+                      </CardContent>
+                    </Card>
                   </div>
-                  </Zoom>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        
+                </Zoom>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+
       </Container>
     </React.Fragment>
   );

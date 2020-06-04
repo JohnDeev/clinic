@@ -60,16 +60,16 @@ function FrontPageLayout(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <Fade top duration={1000}>
-        <img
-          src={logo}
-          alt="sismlogo"
-         width="80"
-          height="147"
-        />
+          <img
+            src={logo}
+            alt="sismlogo"
+            width="80"
+            height="147"
+          />
         </Fade>
-      
+
         <Fade bottom delay={500}>
-        {children}
+          {children}
         </Fade>
 
         <div className={classes.backdrop} />
