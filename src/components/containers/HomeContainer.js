@@ -14,6 +14,7 @@ import FrontPage from './../MaterialComponents/FrontPage';
 import WebBar from '../MaterialComponents/WebBar';
 
 import fachada from './../../img/fachadasism2.jpg'
+import TwTimeline from '../views/TwTimeline';
 
 class HomeContainer extends Component {
 
@@ -58,6 +59,7 @@ class HomeContainer extends Component {
                     <div>
                         <EnterpriseValue/>
                         <Home/>
+                        <TwTimeline />
                     </div>
                 } />
             </div>
