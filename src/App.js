@@ -10,6 +10,8 @@ import ContactContainer from './components/containers/ContactContainer';
 // eslint-disable-next-line
 import {AnimatedSwitch} from 'react-router-transition';
 
+import { Widget } from 'react-chat-widget';
+
 
 class App extends Component {
 
@@ -39,6 +41,7 @@ class App extends Component {
         <Route exact path="/portafolio" component={this.renderPortfolio}></Route>
         <Route exact path="/contacto" component={this.renderContact}></Route>
         {/* </AnimatedSwitch> */}
+        <Widget />
         </div>
       </Router>
     )

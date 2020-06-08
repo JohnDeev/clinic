@@ -7,10 +7,10 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import { infoPrincipios } from './../../const/infos';
+import { mision, vision, infoPrincipios } from './../../const/infos';
 
-import mision from './../../img/misionTest.jpg';
-import vision from './../../img/visionTest.jpg';
+import misionImg from './../../img/misionTest.jpg';
+import visionImg from './../../img/visionTest.jpg';
 
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     /*     maxWidth: '100%',
         maxHeight: '100%', */
     width: 256,
-    height: 256,
+    height: 256,  
     borderRadius: '50%',
 
   },
@@ -64,13 +64,11 @@ export default function AboutUs() {
           <div className={classes.root}><h2 className={classes.texto}>Misión</h2></div>
           <Grid container spacing={1} alignItems="center">
             <Grid item >
-              <img className={classes.img} alt="mision" src={mision} />
+              <img className={classes.img} alt="mision" src={misionImg} />
             </Grid>
             <Grid item xs={12} sm container>
               <Typography className={classes.texto}>
-                SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una Institución Prestadora de Servicios de Salud privada,
-                orientada a satisfacer las necesidades en salud de nuestros clientes, de manera eficaz y eficiente, apoyados
-                en un Talento Humano Competente, en aras de mejorar su calidad de vida.
+                {mision}
                 </Typography>
             </Grid>
           </Grid>
@@ -79,13 +77,11 @@ export default function AboutUs() {
           <div className={classes.root}><h2 className={classes.texto}>Visión</h2></div>
           <Grid container spacing={1} alignItems="center" direction="row-reverse">
             <Grid item>
-              <div ><img className={classes.img} alt="mision" src={vision} /></div>
+              <div ><img className={classes.img} alt="mision" src={visionImg} /></div>
             </Grid>
             <Grid item xs={12} sm container>
               <Typography className={classes.texto}>
-                Ser identificados y reconocidos, en el año 2017, como una de las mejores Instituciones Prestadoras de Servicios
-                de Salud en la región caribe, impactando en la Satisfacción de nuestros Clientes, el bienestar de nuestro Talento
-                Humano y la Rentabilidad Económica de la Empresa.
+                {vision}
                 </Typography>
             </Grid>
           </Grid>
