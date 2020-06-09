@@ -14,7 +14,8 @@ import FrontPage from './../MaterialComponents/FrontPage';
 import WebBar from '../MaterialComponents/WebBar';
 
 import fachada from './../../img/fachadasism2.jpg'
-import TwTimeline from '../views/TwTimeline';
+import SocialView from '../views/SocialView';
+
 
 class HomeContainer extends Component {
 
@@ -59,12 +60,13 @@ class HomeContainer extends Component {
                     <div>
                         <EnterpriseValue/>
                         <Home/>
-                        <TwTimeline />
+                        <SocialView />
                     </div>
                 } />
             </div>
         );
     }
+
 }
 
 export default withRouter(HomeContainer);
