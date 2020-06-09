@@ -15,6 +15,7 @@ import WebBar from '../MaterialComponents/WebBar';
 
 import fachada from './../../img/fachadasism2.jpg'
 import SocialView from '../views/SocialView';
+import Calendario from '../views/Calendario';
 
 
 class HomeContainer extends Component {
@@ -61,6 +62,7 @@ class HomeContainer extends Component {
                         <EnterpriseValue/>
                         <Home/>
                         <SocialView />
+                        <Calendario />
                     </div>
                 } />
             </div>
