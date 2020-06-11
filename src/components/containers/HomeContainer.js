@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-//import WebBar from './../MaterialElements/WebBar';
 import {Button} from '@material-ui/core';
 import AppFrame from '../AppFrame';
-//import Portfolio from '../PageComponent/Portfolio';
-//import Typography from '@material-ui/core/Typography';
-//import LoremIpsum from 'react-lorem-ipsum';
-import Home from '../views/Home';
-import EnterpriseValue from '../views/EnterpriseValue';
 //import WebActions from '../WebActions';
 import FrontPage from './../MaterialComponents/FrontPage';
 import WebBar from '../MaterialComponents/WebBar';
 
 import fachada from './../../img/fachadasism2.jpg'
-import SocialView from '../views/SocialView';
-import Calendario from '../views/Calendario';
+import BodyIndex from '../views/BodyIndex';
 
 
 class HomeContainer extends Component {
@@ -59,10 +51,11 @@ class HomeContainer extends Component {
                 }
                 body={
                     <div>
-                        <EnterpriseValue/>
+                        {/* <EnterpriseValue/>
                         <Home/>
                         <SocialView />
-                        <Calendario />
+                        <Calendario /> */}
+                        <BodyIndex />
                     </div>
                 } />
             </div>

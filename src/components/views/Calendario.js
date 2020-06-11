@@ -2,13 +2,14 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-import './Main.scss' // webpack must be configured to do this
+import './sass/Main.scss' // webpack must be configured to do this
 
 export default class Calendario extends React.Component {
 
   render() {
     return (
-      <FullCalendar defaultView="dayGridMonth" 
+      <FullCalendar
+      defaultView="dayGridMonth" 
       plugins={[ dayGridPlugin ]} 
       events={[
         { title: 'Cumple fulano', date: '2020-06-09' },

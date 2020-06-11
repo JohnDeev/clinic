@@ -7,7 +7,7 @@ const TwTimeline = () => {
             <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="ipssism"
-                options={{ width: "60%", height: 500 }}
+                options={{ width: 340, height: 500 }}
             />
         </div>
     );
