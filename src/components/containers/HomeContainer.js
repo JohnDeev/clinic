@@ -9,6 +9,9 @@ import WebBar from '../MaterialComponents/WebBar';
 import fachada from './../../img/fachadasism2.jpg'
 import BodyIndex from '../views/BodyIndex';
 
+import EnterpriseValue from './../views/EnterpriseValue';
+import Home from './../views/Home';
+
 
 class HomeContainer extends Component {
 
@@ -51,11 +54,12 @@ class HomeContainer extends Component {
                 }
                 body={
                     <div>
-                        {/* <EnterpriseValue/>
-                        <Home/>
-                        <SocialView />
-                        <Calendario /> */}
-                        <BodyIndex />
+                        <BodyIndex contenido={
+                            <div>
+                                <EnterpriseValue/>
+                                <Home/>
+                            </div>
+                        }/>
                     </div>
                 } />
             </div>
