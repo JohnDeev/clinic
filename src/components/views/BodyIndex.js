@@ -18,7 +18,7 @@ const BodyIndex = ({contenido,classes}) => {
     <div className={classes.root}>
       <Grid container spacing={0}>
         
-        <Grid item xs={12} sm={9}>
+        <Grid item xs={12} md={9}>
           {contenido}
 
         </Grid>
@@ -27,7 +27,6 @@ const BodyIndex = ({contenido,classes}) => {
           <FbTimeline />
           <Calendario />
         </Grid>
-        
       </Grid>
     </div>
   );

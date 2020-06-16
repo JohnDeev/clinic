@@ -63,10 +63,10 @@ export default function AboutUs() {
         <Fade left>
           <div className={classes.root}><h2 className={classes.texto}>Misión</h2></div>
           <Grid container spacing={1} alignItems="center">
-            <Grid item >
+            <Grid xs={12} md={4}>
               <img className={classes.img} alt="mision" src={misionImg} />
             </Grid>
-            <Grid item xs={12} sm container>
+            <Grid item xs={12} md={8} container>
               <Typography className={classes.texto}>
                 {mision}
                 </Typography>
@@ -76,10 +76,10 @@ export default function AboutUs() {
         <Fade right>
           <div className={classes.root}><h2 className={classes.texto}>Visión</h2></div>
           <Grid container spacing={1} alignItems="center" direction="row-reverse">
-            <Grid item>
-              <div ><img className={classes.img} alt="mision" src={visionImg} /></div>
+            <Grid item xs={12} md={4}>
+              <div ><img className={classes.img} alt="vision" src={visionImg} /></div>
             </Grid>
-            <Grid item xs={12} sm container>
+            <Grid item xs={12} md={8} container>
               <Typography className={classes.texto}>
                 {vision}
                 </Typography>
