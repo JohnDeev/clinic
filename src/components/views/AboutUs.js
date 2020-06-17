@@ -110,10 +110,7 @@ export default function AboutUs() {
             ))}
           </Grid>
         </Container>
-
       </Container>
     </React.Fragment>
   );
 }
-
-//export default AboutUs;
