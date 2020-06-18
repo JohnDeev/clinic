@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function WebBar({children}) {
+export default function WebBar({botones, enlaces}) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl,  setMobileMoreAnchorEl] = React.useState(null);
@@ -188,7 +188,7 @@ export default function WebBar({children}) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {children}
+      {botones}
       
     </Menu>
     
@@ -214,7 +214,7 @@ export default function WebBar({children}) {
           
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {children}
+            {botones}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -245,7 +245,7 @@ export default function WebBar({children}) {
         </div>
         <Divider />
         <List>
-          {children}          
+          {botones}          
         </List>
         <Divider />
         {/* <List>

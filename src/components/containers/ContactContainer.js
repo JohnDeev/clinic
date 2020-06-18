@@ -39,11 +39,23 @@ class ContactContainer extends Component {
                 header = {<ImageBanner titulo="Contáctenos" imagen={laboratorioclinico}/>}
                 bar={
                     <div>
-                        <WebBar>
-                        <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
+                        <WebBar botones={
+                            <div>
+                                <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
                         <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                         <Button color="inherit" onClick={this.handleOnClickPortFolio}>Portafolio</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
+                            </div>
+                        }
+                        
+                        enlaces={
+                            <div>
+                                
+                            </div>
+                        }
+
+                        >
+                        
                         </WebBar>
                     </div>
                 }
