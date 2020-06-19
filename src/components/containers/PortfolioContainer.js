@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 import { withRouter} from 'react-router-dom';
 //import WebBar from './../MaterialElements/WebBar';
-import {Button} from '@material-ui/core';
+import { Button, ListItem, ListItemText } from '@material-ui/core';
 import AppFrame from '../AppFrame';
 import Portfolio from '../views/Portfolio';
 //import Typography from '@material-ui/core/Typography';
@@ -54,8 +54,18 @@ class PortfolioContainer extends Component {
                         
                         enlaces={
                             <div>
-                                
-                            </div>
+
+                                        {[{ name: 'Inicio', accion: this.handleOnClickHome },
+                                        { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
+                                        { name: 'Portafolio', accion: this.handleOnClickPortFolio },
+                                        { name: 'Contacto', accion: this.handleOnClickContact }].map((item, key) => (
+                                            <ListItem button key={item.name}>
+
+                                                <ListItemText primary={item.name} onClick={item.accion} />
+                                            </ListItem>
+                                        ))}
+
+                                    </div>
                         }
 
                         >

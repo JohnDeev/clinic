@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter} from 'react-router-dom';
-import {Button} from '@material-ui/core';
+import { Button, ListItem, ListItemText } from '@material-ui/core';
 import AppFrame from '../AppFrame';
 import Contact from '../views/Contact';
 import WebBar from '../MaterialComponents/WebBar';
 import ImageBanner from '../MaterialComponents/ImageBanner';
 
 import laboratorioclinico from './../../img/portfolioImg/laboratorioclinico.jpg';
+
+
 
 class ContactContainer extends Component {
 
@@ -50,8 +52,18 @@ class ContactContainer extends Component {
                         
                         enlaces={
                             <div>
-                                
-                            </div>
+
+                                        {[{ name: 'Inicio', accion: this.handleOnClickHome },
+                                        { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
+                                        { name: 'Portafolio', accion: this.handleOnClickPortFolio },
+                                        { name: 'Contacto', accion: this.handleOnClickContact }].map((item, key) => (
+                                            <ListItem button key={item.name}>
+
+                                                <ListItemText primary={item.name} onClick={item.accion} />
+                                            </ListItem>
+                                        ))}
+
+                                    </div>
                         }
 
                         >

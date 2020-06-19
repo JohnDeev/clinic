@@ -245,7 +245,7 @@ export default function WebBar({botones, enlaces}) {
         </div>
         <Divider />
         <List>
-          {botones}          
+          {enlaces}          
         </List>
         <Divider />
         {/* <List>
