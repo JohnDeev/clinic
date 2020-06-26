@@ -14,6 +14,7 @@ import visionImg from './../../img/visionTest.jpg';
 
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import GridImages from './GridImages';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -110,6 +111,7 @@ export default function AboutUs() {
             ))}
           </Grid>
         </Container>
+        <GridImages />
       </Container>
     </React.Fragment>
   );
