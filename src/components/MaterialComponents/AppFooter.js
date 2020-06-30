@@ -66,13 +66,13 @@ const AppFooter = () => {
   return (
     <div className={classes.root}>
       <Grid container alignItems="center">
-        <Grid item xs={12} sm={2} className={classes.container}>
+        <Grid item xs={12} md={2} className={classes.container}>
           <img src={logoSism} alt="sism" className={classes.logotipo}></img>
         </Grid>
-        <Grid item xs={12} sm={8} className={classes.container}  >
+        <Grid item xs={12} md={8} className={classes.container}  >
           Carrera 19 No. 26B - 53 Barrio Los Naranjos <br /> Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
       </Grid>
-        <Grid item xs={12} sm={2} className={classes.container}>
+        <Grid item xs={12} md={2} className={classes.container}>
           Visita nuestras redes sociales
       <Grid className={classes.iconsWrapper}>
             <Grid item className={classes.icons}>

@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import FormContact from './FormContact';
 import { Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 // eslint-disable-next-line
 const useStyles = makeStyles((theme) => ({
@@ -65,8 +66,17 @@ export default function CompCOntact() {
       <CssBaseline />
       <Container className={classes.container}>
       <Typography align='justify' variant='h4'>Escríbenos su mensaje</Typography>
-        <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
+      <Grid container spacing={1} alignItems="center">
+      <Grid xs={12} md={6}>
+      
+      <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
+        </Grid>
+        <Grid xs={12} md={6}>
         <FormContact/>
+        </Grid>
+        </Grid>
+      
+      
       </Container>
     </React.Fragment>
   );
