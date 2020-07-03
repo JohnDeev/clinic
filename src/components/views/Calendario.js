@@ -14,7 +14,9 @@ export default class Calendario extends React.Component {
       events={[
         { title: 'Cumple fulano', date: '2020-06-09' },
         { title: 'Cumple sutano', date: '2020-06-15' },
-        { title: 'Cumple mengano', date: '2020-06-21' }
+        { title: 'Cumple mengano', date: '2020-06-21' },
+        { title: 'Cumple Juli', date: '2020-07-03' },
+        
         
       ]}/>
     )
