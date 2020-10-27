@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import FormContact from './FormContact';
+import FormContact2 from './FormContact2';
 import { Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
@@ -72,7 +72,7 @@ export default function CompCOntact() {
       <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
         </Grid>
         <Grid xs={12} md={6}>
-        <FormContact/>
+        <FormContact2/>
         </Grid>
         </Grid>
       

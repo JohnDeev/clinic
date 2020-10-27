@@ -24,6 +24,7 @@
     "react-chat-widget": "^3.0.1",
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
+    "react-hook-form": "^6.9.6",
     "react-hooks": "^1.0.1",
     "react-lorem-ipsum": "^1.4.4",
     "react-redux": "^7.2.0",
