@@ -76,12 +76,16 @@ const AppFooter = () => {
           Visita nuestras redes sociales
       <Grid className={classes.iconsWrapper}>
             <Grid item className={classes.icons}>
-              <a href="https://www.facebook.com/sism.ips" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
+            <FacebookIcon className={classes.iconfb} />
+              
+              <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon} />
+              
+              {/* <a href="https://www.facebook.com/sism.ips" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
                 <FacebookIcon className={classes.iconfb} />
               </a>
               <a href="https://twitter.com/ipssism" rel="noopener noreferrer" target="_blank" className="enlaceMenu">
                 <TwitterIcon style={{ fontSize: 40, color: "#00acee" }} className={classes.icon} />
-              </a>
+              </a> */}
             </Grid>
           </Grid>
         </Grid>
