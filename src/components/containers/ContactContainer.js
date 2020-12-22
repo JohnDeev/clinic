@@ -45,7 +45,7 @@ class ContactContainer extends Component {
                             <div>
                                 <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
                         <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
-                        <Button color="inherit" onClick={this.handleOnClickPortFolio}>Portafolio</Button>
+                        <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
                             </div>
                         }
@@ -55,7 +55,7 @@ class ContactContainer extends Component {
 
                                         {[{ name: 'Inicio', accion: this.handleOnClickHome },
                                         { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
-                                        { name: 'Portafolio', accion: this.handleOnClickPortFolio },
+                                        { name: 'Nuestros servicios', accion: this.handleOnClickPortFolio },
                                         { name: 'Contacto', accion: this.handleOnClickContact }].map((item, key) => (
                                             <ListItem button key={item.name}>
 
