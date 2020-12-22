@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import { mision, vision, infoPrincipios } from './../../const/infos';
+import { mision, vision, infoPrincipios, objetivos } from './../../const/infos';
 
 import misionImg from './../../img/misionTest.jpg';
 import visionImg from './../../img/visionTest.jpg';
@@ -87,6 +87,20 @@ export default function AboutUs() {
             </Grid>
           </Grid>
         </Fade>
+        
+        <Fade right>
+          <div className={classes.root}><h2 className={classes.texto}>Objetivos</h2></div>
+          <Grid container spacing={1} alignItems="center" direction="row-reverse">
+
+            <Grid xs={12} md={12} container>
+              <Typography className={classes.texto}>
+                {objetivos}
+                </Typography>
+            </Grid>
+          </Grid>
+        </Fade>
+        <Fade up></Fade>
+
         <h2>Principios Corporativos</h2>
         <Container className={classes.cardGrid} >
           {/* End hero unit */}
@@ -111,7 +125,7 @@ export default function AboutUs() {
             ))}
           </Grid>
         </Container>
-        <GridImages />
+        {/* <GridImages /> */}
       </Container>
     </React.Fragment>
   );
