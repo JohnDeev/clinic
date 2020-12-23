@@ -43,26 +43,31 @@ export const infoPrincipios = [
 
 export const infoPortfolio = [
 
-  { name: 'Medicina General', image: medicinageneral, description: '1' },
-  { name: 'Medicina Interna', image: medicinainterna, description: '2' },
-  { name: 'Ginescostetricia', image: ginescostetricia, description: '3' },
-  { name: 'Pediatria', image: pediatria, description: '4' },
-  { name: 'Enfermería', image: enfermeria, description: '5' },
-  { name: 'Promoción en salud', image: promocionensalud, description: '6' },
-  { name: 'Planificación familiar', image: planificacionfamiliar, description: '7' },
-  { name: 'Nutrición y dietética', image: nutricionydietetica, description: '8' },
-  { name: 'Psicología', image: psicologia, description: '9' },
-  { name: 'Laboratorio clínico', image: laboratorioclinico, description: '10' },
-  { name: 'Toma de muestras de laboratorio clínico', image: tomademuestradelaboratorioclinico, description: '11' },
-  { name: 'Endocrinología', image: endocrinologia, description: '12' },
-  { name: 'Gastroenterología', image: gastroenterologia, description: '13' },
-  { name: 'Neumología', image: neumologia, description: '14' },
-  { name: 'Neurología', image: neurologia, description: '15' },
-  { name: 'Otorrinolaringología', image: otorrinolaringologia, description: '16' },
-  { name: 'Urología', image: urologia, description: '17' },
-  { name: 'Dermatología', image: dermatologia, description: '18' },
-  { name: 'Ultrasonido', image: ultrasonido, description: '19' },
-
+  { id:1, name: 'Medicina General', image: medicinageneral, description: '' },
+  { id:2, name: 'Enfermería', image: enfermeria, description: '' },
+  { id:3, name: 'Ginecobstetricia', image: ginescostetricia, description: '' },
+  { id:4, name: 'Pediatria', image: pediatria, description: '' },
+  { id:5, name: 'Diagnóstico Cardiovascular', image: medicinainterna, description: '' },
+  { id:6, name: 'Ultrasonido', image: medicinainterna, description: '' },
+  { id:7, name: 'Endocrinología', image: endocrinologia, description: '' },
+  { id:8, name: 'Psicología', image: psicologia, description: '' },
+  { id:9, name: 'Medicina Interna', image: medicinainterna, description: '' },
+  { id:10, name: 'Odontología', image: psicologia, description: '' },
+  { id:11, name: 'Nutrición y dietética', image: nutricionydietetica, description: '' },
+  { id:12, name: 'Medicina Familiar', image: planificacionfamiliar, description: '' },
+  { id:13, name: 'Diagnóstico Cardiovascular', image: planificacionfamiliar, description: '' },
+  { id:17, name: 'Dispensación de medicamentos', image: tomademuestradelaboratorioclinico, description: '' },
+  { id:15, name: 'Terapia Respiratoria', image: psicologia, description: '' },
+  { id:16, name: 'Detección temprana', image: psicologia, description: "Alteraciones de crecimiento y desarrollo (Menor 10 años), Alteraciones del embarazo, Alteración desarrollo del joven (10 a 29 años), Alteraciones del adulto (Mayor 45 años), Cáncer de cuello uterino, Cáncer de seno, Alteraciones de la agudeza visual" },
+  { id:14, name: 'Protección específica', image: promocionensalud, description: 'Atención en planificación familiar hombres y mujeres\nVacunación' },
+  { id:18, name: 'Laboratorio clínico', image: laboratorioclinico, description: 'Toma de muestras de laboratorio clínico' },
+   
+  /* { id:13, name: 'Gastroenterología', image: gastroenterologia, description: '' },
+  { id:14, name: 'Neumología', image: neumologia, description: '' },
+  { id:15, name: 'Neurología', image: neurologia, description: '' },
+  { id:16, name: 'Otorrinolaringología', image: otorrinolaringologia, description: '' },
+  { id:17, name: 'Urología', image: urologia, description: '' },
+  { id:18, name: 'Dermatología', image: dermatologia, description: '' }, */
 ]
 
 export const mision = "SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una  Institución privada  Prestadora de Servicios de Salud  ambulatoria  del Nivel Primario; en el departamento del Magdalena; brindando un servicio seguro, pertinente, accesible, eficaz, oportuno y confiable, que permite cubrir las expectativas en salud, de los usuarios que los reciben; diseñados de acuerdo a los modelos de atención requeridos con el apoyo de un talento humano competente que permite mejorar la salud y su calidad de vida.";

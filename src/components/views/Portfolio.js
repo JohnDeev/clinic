@@ -64,7 +64,7 @@ export default function Album() {
 
         <Grid container spacing={6}>
           {infoPortfolio.map((item) => (
-            <Grid item key={item.name} xs={12} sm={6} md={4}>
+            <Grid item key={item.id} xs={12} sm={6} md={4}>
               <Zoom cascade>
                 <div className={classes.solveCard}>
                   <Card className={classes.card}>
@@ -76,6 +76,9 @@ export default function Album() {
                     <CardContent className={classes.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">
                         {item.name}
+                      </Typography>
+                      <Typography variant="body2" color="textPrimary" component="p">
+                        {item.description}
                       </Typography>
                     </CardContent>
                   </Card>
