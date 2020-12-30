@@ -62,7 +62,7 @@ export default function Album() {
         {/* End hero unit */}
         <Typography className={classes.texto}>Como Institución prestadora de servicios de salud ofrecemos servicios de I y  II Nivel de Complejidad de tipo ambulatorio, enmarcados en un modelo familiar como su eje y objetivo.</Typography>
 
-        <Grid container spacing={6}>
+        <Grid container spacing={6} justify="center">
           {infoPortfolio.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={4}>
               <Zoom cascade>
@@ -71,7 +71,7 @@ export default function Album() {
                     <CardMedia
                       className={classes.cardMedia}
                       image={item.image}
-                      title="Image title"
+                      title={item.name}
                     />
                     <CardContent className={classes.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">
