@@ -10,13 +10,27 @@ import psicologia from './../img/portfolioImg/psicologia.jpeg';
 import laboratorioclinico from './../img/portfolioImg/laboratorioclinico.jpg';
 import tomademuestradelaboratorioclinico from './../img/portfolioImg/tomademuestradelaboratorioclinico.jpg';
 import endocrinologia from './../img/portfolioImg/endocrinologia.jpg';
-import gastroenterologia from './../img/portfolioImg/gastroenterologia.jpg';
+/* import gastroenterologia from './../img/portfolioImg/gastroenterologia.jpg';
 import neumologia from './../img/portfolioImg/neumologia.jpg';
 import neurologia from './../img/portfolioImg/neurologia.jpg';
 import otorrinolaringologia from './../img/portfolioImg/otorrinolaringologia.jpg';
 import urologia from './../img/portfolioImg/urologia.png';
 import dermatologia from './../img/portfolioImg/dermatologia.jpg';
-import ultrasonido from './../img/portfolioImg/ultrasonido.jpg';
+import ultrasonido from './../img/portfolioImg/ultrasonido.jpg'; */
+
+import respeto from './../img/valores/respeto.png';
+import honestidad from './../img/valores/honestidad.jpg';
+import responsabilidad from './../img/valores/responsabilidad.jpg';
+import seguridadpaciente from './../img/valores/seguridadpaciente.png';
+import mejoramiento from './../img/valores/mejoramiento.jpg';
+
+export const valores =[
+  {id: 1, name: 'Respeto', image: respeto},
+  {id: 2, name: 'Honestidad', image: honestidad},
+  {id: 3, name: 'Responsabilidad', image: responsabilidad},
+  {id: 4, name: 'Seguridad del Paciente', image: seguridadpaciente},
+  {id: 5, name: 'Mejoramiento contínuo', image: mejoramiento}
+]
 
 export const infoPrincipios = [
 
