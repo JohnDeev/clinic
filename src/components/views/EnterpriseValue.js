@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
 
 const styles = (theme) => ({
   root: {
@@ -47,32 +49,31 @@ function EnterpriseValue(props) {
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src="/static/themes/onepirate/productValues1.svg"
-                alt="icon1"
-              />
+              <WhatsAppIcon fontSize='large'/>
               <Typography variant="h6" className={classes.title}>
-                text1
+                Aparte su cita vía WhatsApp
               </Typography>
-              <Typography variant="h5">
-                {'Descriptive text 1'}
+              <Typography  variant="h5">
+                <a href="https://api.whatsapp.com/send?phone=+573016313288&text= Hola!%20Quiero%20contratar%20sus%20servicios!" 
+                target="_blank"  
+                rel="noopener noreferrer">Apartar cita
+                </a>
                 
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
+            <img
                 className={classes.image}
                 src="/static/themes/onepirate/productValues2.svg"
                 alt="icon2"
               />
               <Typography variant="h6" className={classes.title}>
-                text2
+                Sedes
               </Typography>
               <Typography variant="h5">
-              {'Descriptive text 2'}
+              {'Conoce nuestras sedes'}
               </Typography>
             </div>
           </Grid>
@@ -84,7 +85,7 @@ function EnterpriseValue(props) {
                 alt="icon3"
               />
               <Typography variant="h6" className={classes.title}>
-                text3
+                Estados financieros
               </Typography>
               <Typography variant="h5">
               {'Descriptive text 3'}
