@@ -46,7 +46,7 @@ function EnterpriseValue(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
       
-        <Grid container spacing={5}>
+        <Grid container spacing={5} justify="center">
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
               <WhatsAppIcon fontSize='large'/>
@@ -54,7 +54,7 @@ function EnterpriseValue(props) {
                 Aparte su cita vía WhatsApp
               </Typography>
               <Typography  variant="h5">
-                <a href="https://api.whatsapp.com/send?phone=+573016313288&text= Hola!%20Quiero%20contratar%20sus%20servicios!" 
+                <a href="https://api.whatsapp.com/send?phone=+573105438731&text= Buenas,%20deseo%20apartar%20una%20cita%20médica." 
                 target="_blank"  
                 rel="noopener noreferrer">Apartar cita
                 </a>
@@ -62,7 +62,7 @@ function EnterpriseValue(props) {
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <div className={classes.item}>
             <img
                 className={classes.image}
@@ -76,7 +76,7 @@ function EnterpriseValue(props) {
               {'Conoce nuestras sedes'}
               </Typography>
             </div>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
               <img
@@ -88,7 +88,7 @@ function EnterpriseValue(props) {
                 Estados financieros
               </Typography>
               <Typography variant="h5">
-              {'Descriptive text 3'}
+              {'Descargar'}
               </Typography>
             </div>
           </Grid>
