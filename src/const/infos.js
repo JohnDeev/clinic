@@ -84,7 +84,9 @@ export const infoPortfolio = [
   { id:18, name: 'Dermatología', image: dermatologia, description: '' }, */
 ]
 
-export const mision = "SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una  Institución privada  Prestadora de Servicios de Salud  ambulatoria  del Nivel Primario; en el departamento del Magdalena; brindando un servicio seguro, pertinente, accesible, eficaz, oportuno y confiable, que permite cubrir las expectativas en salud, de los usuarios que los reciben; diseñados de acuerdo a los modelos de atención requeridos con el apoyo de un talento humano competente que permite mejorar la salud y su calidad de vida.";
+export const quees = "SERVICIOS INTEGRALES DE SALUD DEL MAGDALENA es una  Institución privada  Prestadora de Servicios de Salud  ambulatoria  del Nivel Primario; en el departamento del Magdalena; brindando un servicio seguro, pertinente, accesible, eficaz, oportuno y confiable, que permite cubrir las expectativas en salud, de los usuarios que los reciben; diseñados de acuerdo a los modelos de atención requeridos con el apoyo de un talento humano competente que permite mejorar la salud y su calidad de vida.";
+
+export const mision= "Brindar a nuestros usuarios un servicio de salud ambulatorio de Nivel Primario con calidad a nivel del Departamento del Magdalena; encontrando seguridad, pertinencia, accesibilidad, eficacia, oportunidad y confiabilidad; logrando cumplir con las expectativas de salud, de los usuarios que reciben los servicios; diseñados de acuerdo a los modelos de atención requeridos a nivel departamental y nacional; con un talento humano competente que entregan lo mejor de sí mismos para mejorar la salud y su calidad de vida."
 
 export const vision = "Ser reconocidos  como una de las mejores instituciones prestadoras de servicios de salud en el año 2025 en la región caribe, con una atención integral, responsable, segura y eficaz, logrando impactar en el buen comportamiento de la salud de nuestros usuarios, con respeto y ética, con una sostenibilidad financiera que permita contar cozn la tecnología y el recurso humano que merece la región.";
 
