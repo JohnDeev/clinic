@@ -80,8 +80,8 @@ class HomeContainer extends Component {
                         <div>
                             <BodyIndex contenido={
                                 <div>
-                                    <EnterpriseValue />
                                     <Home />
+                                    <EnterpriseValue />
                                 </div>
                             } />
                         </div>
