@@ -3,20 +3,26 @@ import medicinainterna from './../img/portfolioImg/medicinainterna.png';
 import ginescostetricia from './../img/portfolioImg/ginescostetricia.jpg';
 import pediatria from './../img/portfolioImg/pediatria.png';
 import enfermeria from './../img/portfolioImg/enfermeria.jpg';
-import promocionensalud from './../img/portfolioImg/promocionensalud.jpg';
 import planificacionfamiliar from './../img/portfolioImg/planificacionfamiliar.jpg';
 import nutricionydietetica from './../img/portfolioImg/nutricionydietetica.jpg';
-import psicologia from './../img/portfolioImg/psicologia.jpeg';
+import psicologia from './../img/portfolioImg/psicologia2.jpg';
 import laboratorioclinico from './../img/portfolioImg/laboratorioclinico.jpg';
 import tomademuestradelaboratorioclinico from './../img/portfolioImg/tomademuestradelaboratorioclinico.jpg';
 import endocrinologia from './../img/portfolioImg/endocrinologia.jpg';
+import odontologia from './../img/portfolioImg/odontologia.jpg';
+import diagnosticocardiovascular from './../img/portfolioImg/diagnosticocardiovascular.jpg';
+import ultrasonido from './../img/portfolioImg/ultrasonido.jpeg';
+import terapiarespiratoria from './../img/portfolioImg/terapiarespiratoria.png';
+import detecciontemprana from './../img/portfolioImg/detecciontemprana.jpg';
+import proteccionespecifica from './../img/portfolioImg/proteccionespecifica.jpg';
 /* import gastroenterologia from './../img/portfolioImg/gastroenterologia.jpg';
 import neumologia from './../img/portfolioImg/neumologia.jpg';
 import neurologia from './../img/portfolioImg/neurologia.jpg';
 import otorrinolaringologia from './../img/portfolioImg/otorrinolaringologia.jpg';
 import urologia from './../img/portfolioImg/urologia.png';
 import dermatologia from './../img/portfolioImg/dermatologia.jpg';
-import ultrasonido from './../img/portfolioImg/ultrasonido.jpg'; */
+import ultrasonido from './../img/portfolioImg/ultrasonido.jpg'; 
+import promocionensalud from './../img/portfolioImg/promocionensalud.jpg';*/
 
 import respeto from './../img/valores/respeto.png';
 import honestidad from './../img/valores/honestidad.jpg';
@@ -61,19 +67,18 @@ export const infoPortfolio = [
   { id:2, name: 'Enfermería', image: enfermeria, description: '' },
   { id:3, name: 'Ginecobstetricia', image: ginescostetricia, description: '' },
   { id:4, name: 'Pediatria', image: pediatria, description: '' },
-  { id:5, name: 'Diagnóstico Cardiovascular', image: medicinainterna, description: '' },
-  { id:6, name: 'Ultrasonido', image: medicinainterna, description: '' },
+  { id:5, name: 'Diagnóstico Cardiovascular', image: diagnosticocardiovascular, description: '' },
+  { id:6, name: 'Ultrasonido', image: ultrasonido, description: '' },
   { id:7, name: 'Endocrinología', image: endocrinologia, description: '' },
   { id:8, name: 'Psicología', image: psicologia, description: '' },
   { id:9, name: 'Medicina Interna', image: medicinainterna, description: '' },
-  { id:10, name: 'Odontología', image: psicologia, description: '' },
+  { id:10, name: 'Odontología', image: odontologia, description: '' },
   { id:11, name: 'Nutrición y dietética', image: nutricionydietetica, description: '' },
   { id:12, name: 'Medicina Familiar', image: planificacionfamiliar, description: '' },
-  { id:13, name: 'Diagnóstico Cardiovascular', image: planificacionfamiliar, description: '' },
   { id:17, name: 'Dispensación de medicamentos', image: tomademuestradelaboratorioclinico, description: '' },
-  { id:15, name: 'Terapia Respiratoria', image: psicologia, description: '' },
-  { id:16, name: 'Detección temprana', image: psicologia, description: "Alteraciones de crecimiento y desarrollo (Menor 10 años), Alteraciones del embarazo, Alteración desarrollo del joven (10 a 29 años), Alteraciones del adulto (Mayor 45 años), Cáncer de cuello uterino, Cáncer de seno, Alteraciones de la agudeza visual" },
-  { id:14, name: 'Protección específica', image: promocionensalud, description: 'Atención en planificación familiar hombres y mujeres\nVacunación' },
+  { id:15, name: 'Terapia Respiratoria', image: terapiarespiratoria, description: '' },
+  { id:16, name: 'Detección temprana', image: detecciontemprana, description: "Alteraciones de crecimiento y desarrollo (Menor 10 años), Alteraciones del embarazo, Alteración desarrollo del joven (10 a 29 años), Alteraciones del adulto (Mayor 45 años), Cáncer de cuello uterino, Cáncer de seno, Alteraciones de la agudeza visual" },
+  { id:14, name: 'Protección específica', image: proteccionespecifica, description: 'Atención en planificación familiar hombres y mujeres\nVacunación' },
   { id:18, name: 'Laboratorio clínico', image: laboratorioclinico, description: 'Toma de muestras de laboratorio clínico' },
    
   /* { id:13, name: 'Gastroenterología', image: gastroenterologia, description: '' },
