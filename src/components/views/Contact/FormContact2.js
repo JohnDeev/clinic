@@ -35,7 +35,7 @@ export default function FormContact2() {
       <CssBaseline />
       <div className={classes.paper}>
       
-        <form className={classes.form} noValidate>
+        <form className={classes.form} >
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -88,7 +88,7 @@ export default function FormContact2() {
             
           </Grid>
           <Button
-            type="submit"
+            //type="submit"
             fullWidth
             variant="contained"
             color="primary"
