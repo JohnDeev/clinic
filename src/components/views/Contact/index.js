@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'justify',
     paddingTop: '20px',
     //marginLeft: theme.spacing(6),
-    
+
   },
 }));
 
@@ -65,18 +65,18 @@ export default function CompCOntact() {
     <React.Fragment>
       <CssBaseline />
       <Container className={classes.container}>
-      <Typography align='justify' variant='h4'>Escríbenos su mensaje</Typography>
-      <Grid container spacing={1} alignItems="center">
-      <Grid xs={12} md={6}>
-      
-      <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
+        <Typography align='justify' variant='h4'>Escríbenos su mensaje</Typography>
+        <Grid container spacing={1} alignItems="center">
+          <Grid xs={12} md={6}>
+
+            <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <FormContact2 />
+          </Grid>
         </Grid>
-        <Grid xs={12} md={6}>
-        <FormContact2/>
-        </Grid>
-        </Grid>
-      
-      
+
+
       </Container>
     </React.Fragment>
   );
