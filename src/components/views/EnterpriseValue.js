@@ -77,7 +77,7 @@ function EnterpriseValue(props) {
               </Typography>
             </div>
           </Grid> */}
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <div className={classes.item}>
               <img
                 className={classes.image}
@@ -91,7 +91,7 @@ function EnterpriseValue(props) {
               {'Descargar'}
               </Typography>
             </div>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </section>
