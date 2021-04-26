@@ -4,6 +4,8 @@ import AppFooter from './MaterialComponents/AppFooter';
 import 'react-chat-widget/lib/styles.css';
 
 
+
+
 const AppFrame = ({ header, bar, body }) => {
     return (
         <div>
@@ -16,7 +18,10 @@ const AppFrame = ({ header, bar, body }) => {
             <div>
                 {body}
             </div>
+            <div >
             <AppFooter />
+            </div>
+            
         </div>
     );
 };
