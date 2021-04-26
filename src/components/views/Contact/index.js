@@ -6,6 +6,11 @@ import FormContact2 from './FormContact2';
 import { Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+
 // eslint-disable-next-line
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,30 +21,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(5),
     //display: 'flex',
-    alignItems: 'center',
+    //alignItems: 'center',
 
   },
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
     maxWidth: 500,
-  },
-  image: {
-
-    width: 256,
-    height: 256,
-
-
-  },
-  img: {
-    margin: 'auto',
-    display: 'block',
-    /*     maxWidth: '100%',
-        maxHeight: '100%', */
-    width: 256,
-    height: 256,
-    borderRadius: '50%',
-    justifyContent: "center",
   },
 
   cardGrid: {
@@ -50,31 +38,110 @@ const useStyles = makeStyles((theme) => ({
     display: 'hover',
     justifyContent: 'justify',
     alignItems: 'justify',
-    paddingTop: '20px',
     //marginLeft: theme.spacing(6),
+    paddingBottom: '20px',
 
   },
+  heading: {
+    fontSize: theme.typography.pxToRem(20),
+    fontWeight: theme.typography.fontWeightRegular,
+    
+  },
+
+
 }));
 
 
 
-export default function CompCOntact() {
+const CompContact = () => {
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
       <Container className={classes.container}>
-        <Typography align='justify' variant='h4'>Escríbenos su mensaje</Typography>
-        <Grid container spacing={1} alignItems="center">
+
+        <div className={classes.root}>
+          <div className={classes.text}>
+            <Typography align='justify' variant='h4'>Horario de atención</Typography>
+            <Typography align='justify' >Lunes a Viernes de 7:00 am a 12:00 pm y de 1:00 pm a 5:00 pm</Typography>
+          </div>
+          <div className={classes.text}>
+            <Typography align='justify' variant='h4'>Teléfonos de contacto</Typography>
+            <Typography align='justify' >A través de los siguientes canales de comunicación puede solicitar su cita médica y odontológica</Typography>
+          </div>
+
+
+
+          <Accordion defaultExpanded="true">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>Régimen subsidiado</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <ul>
+
+                  <li>4394151</li>
+                  <li>4394152</li>
+                  <li>4394153</li>
+                  <li>4394386</li>
+
+                </ul>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion defaultExpanded="true">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography className={classes.heading}>Régimen contributivo</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <ul>
+
+                  <li>3105438731</li>
+                  <li>3106917684</li>
+
+                </ul>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion defaultExpanded="true">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              <Typography className={classes.heading}>Correo electrónico</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                citasmedicassism@gmail.com
+          </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+        </div>
+
+        {/* <Typography align='justify'>
+          Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.
+          </Typography> */}
+        {/*<Grid container spacing={1} alignItems="center">
           <Grid xs={12} md={6}>
 
             <Typography align='justify'>Si tiene una pregunta o sugerencia, por favor, no dude en enviarnos un mensaje. Uno de nuestros funcionarios le dará respuesta en el menor tiempo posible.</Typography>
           </Grid>
-          <Grid xs={12} md={6}>
-            <FormContact2 />
+           <Grid xs={12} md={6}>
+            <FormContact2 /> 
           </Grid>
-        </Grid>
+        </Grid>*/}
 
 
       </Container>
@@ -82,4 +149,4 @@ export default function CompCOntact() {
   );
 }
 
-//export default AboutUs;
+export default CompContact
