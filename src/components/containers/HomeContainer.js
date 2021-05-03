@@ -36,6 +36,10 @@ class HomeContainer extends Component {
         console.log(`/contacto`)
         this.props.history.push('/contacto')
     };
+    handleOnClickCitas =() =>{
+        const win = window.open('https://api.whatsapp.com/send?phone=+573105438731&text= Buenas,%20deseo%20apartar%20una%20cita%20médica.', '_blank');
+        win.focus();
+    };
 
 
     render() {
@@ -52,6 +56,7 @@ class HomeContainer extends Component {
                                     <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                                     <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
                                     <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
+                                    <Button color="inherit" onClick={this.handleOnClickCitas}>Apartar cita</Button>
                                 </div>
                             }
 

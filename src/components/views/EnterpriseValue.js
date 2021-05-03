@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import { Button, ListItem, ListItemText } from '@material-ui/core';
 
 
 const styles = (theme) => ({
@@ -42,6 +43,11 @@ const styles = (theme) => ({
 function EnterpriseValue(props) {
   const { classes } = props;
 
+  const handleOnClickCitas =() =>{
+    const win = window.open('https://api.whatsapp.com/send?phone=+573105438731&text= Buenas,%20deseo%20apartar%20una%20cita%20médica.', '_blank');
+    win.focus();
+};
+
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
@@ -53,13 +59,12 @@ function EnterpriseValue(props) {
               <Typography variant="h6" className={classes.title}>
                 Aparte su cita vía WhatsApp
               </Typography>
-              <Typography  variant="h5">
-                <a href="https://api.whatsapp.com/send?phone=+573105438731&text= Buenas,%20deseo%20apartar%20una%20cita%20médica." 
-                target="_blank"  
-                rel="noopener noreferrer">Apartar cita
-                </a>
+           
+                <Button variant="contained" size="large" color="primary" className={classes.margin} onClick = {handleOnClickCitas}>
+          Apartar Cita
+        </Button>
                 
-              </Typography>
+              
             </div>
           </Grid>
           {/* <Grid item xs={12} md={4}>
