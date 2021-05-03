@@ -2,8 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+// eslint-disable-next-line 
 import FormContact2 from './FormContact2';
 import { Typography } from '@material-ui/core';
+// eslint-disable-next-line 
 import Grid from '@material-ui/core/Grid';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
