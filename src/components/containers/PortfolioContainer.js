@@ -53,7 +53,9 @@ class PortfolioContainer extends Component {
                         <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
                         <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
                         <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
-                        <Button color="inherit" onClick={this.handleOnClickCitas}>Apartar cita</Button>
+                        <Button variant="outlined" style={{
+                                        borderColor: "#FFF", color: "#FFF"
+                                    }} onClick={this.handleOnClickCitas}>Apartar cita</Button>
                             </div>
                         }
                         
