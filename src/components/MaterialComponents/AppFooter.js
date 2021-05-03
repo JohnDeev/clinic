@@ -70,7 +70,7 @@ const AppFooter = () => {
           <img src={logoSism} alt="sism" className={classes.logotipo}></img>
         </Grid>
         <Grid item xs={12} md={8} className={classes.container}  >
-          Carrera 19 No. 26B - 53 Barrio Los Naranjos <br /> Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.
+          Carrera 19 No. 26B - 53 Barrio Los Naranjos <br /> Tel: (5)4394152 - 4394153 Santa Marta D.T.C.H.<br /> <br /> Desarollado por el Departamento de T.I. - SISM
       </Grid>
         <Grid item xs={12} md={2} className={classes.container}>
           Visita nuestras redes sociales
