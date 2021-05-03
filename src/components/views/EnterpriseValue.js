@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import { Button, ListItem, ListItemText } from '@material-ui/core';
+import { Button} from '@material-ui/core';
 
 
 const styles = (theme) => ({
