@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 import { withRouter} from 'react-router-dom';
 //import WebBar from './../MaterialElements/WebBar';
-import { Button, ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText } from '@material-ui/core';
 import AppFrame from '../AppFrame';
 import Portfolio from '../views/Portfolio';
 //import Typography from '@material-ui/core/Typography';
@@ -11,6 +11,7 @@ import WebBar from '../MaterialComponents/WebBar';
 import ImageBanner from '../MaterialComponents/ImageBanner';
 
 import enfermeria from './../../img/portfolioImg/enfermeria.jpg';
+import ButtonMenuApps from '../MaterialComponents/ButtonMenuApps';
 
 class PortfolioContainer extends Component {
 
@@ -47,36 +48,32 @@ class PortfolioContainer extends Component {
                 header = {<ImageBanner titulo="Nuestros servicios" imagen={enfermeria} />}
                 bar={
                     <div>
-                        <WebBar botones={
-                            <div>
-                                <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                        <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
-                        <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
-                        <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
-                        <Button variant="outlined" style={{
-                                        borderColor: "#FFF", color: "#FFF"
-                                    }} onClick={this.handleOnClickCitas}>Apartar cita</Button>
+                        <WebBar container botones={
+                            <div >
+
+                                <ButtonMenuApps />
+
                             </div>
                         }
-                        
-                        enlaces={
-                            <div>
 
-                                        {[{ name: 'Inicio', accion: this.handleOnClickHome },
-                                        { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
-                                        { name: 'Nuestros servicios', accion: this.handleOnClickPortFolio },
-                                        { name: 'Contacto', accion: this.handleOnClickContact }].map((item, key) => (
-                                            <ListItem button key={item.name}>
+                            enlaces={
+                                <div>
 
-                                                <ListItemText primary={item.name} onClick={item.accion} />
-                                            </ListItem>
-                                        ))}
+                                    {[{ name: 'Inicio', accion: this.handleOnClickHome },
+                                    { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
+                                    { name: 'Nuestros servicios', accion: this.handleOnClickPortFolio },
+                                    { name: 'Contacto', accion: this.handleOnClickContact }].map((item, key) => (
+                                        <ListItem button key={item.name}>
 
-                                    </div>
-                        }
+                                            <ListItemText primary={item.name} onClick={item.accion} />
+                                        </ListItem>
+                                    ))}
+
+                                </div>
+                            }
 
                         >
-                        
+
                         </WebBar>
                     </div>
                 }

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { withRouter} from 'react-router-dom';
-import { Button, ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText } from '@material-ui/core';
 import AppFrame from '../AppFrame';
 import WebBar from '../MaterialComponents/WebBar';
 import AboutUs from '../views/AboutUs';
 import ImageBanner from '../MaterialComponents/ImageBanner';
 
 import medicinageneral from './../../img/portfolioImg/medicinageneral.jpg';
+import ButtonMenuApps from '../MaterialComponents/ButtonMenuApps';
 
 
 
@@ -44,22 +45,18 @@ class AboutContainer extends Component {
                 <AppFrame 
                 
                 header = {<ImageBanner titulo="Nuestra empresa" imagen={medicinageneral} />}
-                bar={
-                    <div>
-                        <WebBar botones={
-                            <div>
-                                <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                        <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
-                        <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
-                        <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
-                        <Button variant="outlined" style={{
-                                        borderColor: "#FFF", color: "#FFF"
-                                    }} onClick={this.handleOnClickCitas}>Apartar cita</Button>
-                            </div>
-                        }
-                        
-                        enlaces={
-                            <div>
+                    bar={
+                        <div>
+                            <WebBar container botones={
+                                <div >
+
+                                    <ButtonMenuApps />
+
+                                </div>
+                            }
+
+                                enlaces={
+                                    <div>
 
                                         {[{ name: 'Inicio', accion: this.handleOnClickHome },
                                         { name: '¿Quienes somos?', accion: this.handleOnClickAbout },
@@ -72,13 +69,13 @@ class AboutContainer extends Component {
                                         ))}
 
                                     </div>
-                        }
+                                }
 
-                        >
-                        
-                        </WebBar>
-                    </div>
-                }
+                            >
+
+                            </WebBar>
+                        </div>
+                    }
                 body={
                     <div>
                         <AboutUs/>

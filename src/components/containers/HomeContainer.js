@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Button, ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText } from '@material-ui/core';
 import AppFrame from '../AppFrame';
 //import WebActions from '../WebActions';
 import FrontPage from './../MaterialComponents/FrontPage';
@@ -11,6 +11,7 @@ import BodyIndex from '../views/BodyIndex';
 
 import EnterpriseValue from './../views/EnterpriseValue';
 import Home from './../views/Home';
+import ButtonMenuApps from '../MaterialComponents/ButtonMenuApps';
 
 
 
@@ -50,15 +51,11 @@ class HomeContainer extends Component {
                     header={<FrontPage imagen={fachada} />}
                     bar={
                         <div>
-                            <WebBar botones={
-                                <div>
-                                    <Button color="inherit" onClick={this.handleOnClickHome}>Inicio</Button>
-                                    <Button color="inherit" onClick={this.handleOnClickAbout}>¿Quienes somos?</Button>
-                                    <Button color="inherit" onClick={this.handleOnClickPortFolio}>Nuestros servicios</Button>
-                                    <Button color="inherit" onClick={this.handleOnClickContact}>Contacto</Button>
-                                    <Button variant="outlined" style={{
-                                        borderColor: "#FFF", color: "#FFF"
-                                    }} onClick={this.handleOnClickCitas}>Apartar cita</Button>
+                            <WebBar container botones={
+                                <div >
+                                    
+                                    <ButtonMenuApps />
+                                    
                                 </div>
                             }
 
