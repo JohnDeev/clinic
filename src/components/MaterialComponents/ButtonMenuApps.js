@@ -62,7 +62,7 @@ const ButtonMenuApps = () =>{
                 onClick={handleMenu}
                 color="inherit"
             >
-                Aplicaciones
+                Acceso
 
             </Button>
             <Menu
