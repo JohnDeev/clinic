@@ -5,6 +5,9 @@ import Container from '@material-ui/core/Container';
 // eslint-disable-next-line 
 import FormContact2 from './FormContact2';
 import { Typography } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Asociacion from "../../../Docs/Asociacion.pdf";
+import politicas from "../../../Docs/politica-tt-datos.pdf";
 // eslint-disable-next-line 
 import Grid from '@material-ui/core/Grid';
 
@@ -57,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
 
 const CompContact = () => {
   const classes = useStyles();
+
+//   const handleOnClickPoliticas = () => {
+//     const win = window.open('./Docs/AsociacionDeUsuarios.pdf', '_blank');
+//     win.focus();
+// };
 
   return (
     <React.Fragment>
@@ -129,6 +137,35 @@ const CompContact = () => {
           </Typography>
             </AccordionDetails>
           </Accordion>
+          <Accordion defaultExpanded="true">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+          <Typography className={classes.heading}>Politicas de tratamiento de datos</Typography>
+              </AccordionSummary>
+               <AccordionDetails>
+                  <Button href={politicas} target="_blank">
+                    Ver Políticas de datos
+                  </Button>
+              </AccordionDetails>
+            </Accordion>
+
+          <Accordion defaultExpanded="true">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header">
+          <Typography className={classes.heading}>Asociación de usuarios</Typography>
+              </AccordionSummary>
+               <AccordionDetails>
+                  <Button href={Asociacion} target="_blank">
+                    Ver documento asociación de usuarios
+                  </Button>
+              </AccordionDetails>
+            </Accordion>
+            
 
         </div>
 

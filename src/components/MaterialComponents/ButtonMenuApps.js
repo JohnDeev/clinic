@@ -86,7 +86,7 @@ const ButtonMenuApps = () =>{
 
             <Button color="inherit" onClick={handleOnClickAbout}>¿Quienes somos?</Button>
             <Button color="inherit" onClick={handleOnClickPortFolio}>Nuestros servicios</Button>
-            <Button color="inherit" onClick={handleOnClickContact}>Contactos</Button>
+            <Button color="inherit" onClick={handleOnClickContact}>Contáctanos</Button>
             <Button variant="outlined" style={{
                 borderColor: "#FFF", color: "#FFF"
             }} onClick={handleOnClickCitas}>Apartar cita</Button>
