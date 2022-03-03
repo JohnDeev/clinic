@@ -12,7 +12,6 @@ import BodyIndex from "../views/BodyIndex";
 import EnterpriseValue from "./../views/EnterpriseValue";
 import Home from "./../views/Home";
 import ButtonMenuApps from "../MaterialComponents/ButtonMenuApps";
-import { ScheduleModal } from "../../components/ScheduleModal";
 import { useHistory } from "react-router";
 
 const HomeContainer = (props) => {
@@ -53,7 +52,7 @@ const HomeContainer = (props) => {
   return (
     <div>
       <AppFrame
-        header={<FrontPage imagen={fachada} openModal={openModal} />}
+        header={<FrontPage imagen={fachada} openModal={openModal} showModal={showModal} />}
         bar={
           <div>
             <WebBar
@@ -87,7 +86,6 @@ const HomeContainer = (props) => {
                 <div>
                   <Home />
                   <EnterpriseValue />
-                  <ScheduleModal showModal={showModal} setShowModal={setShowModal} />
                 </div>
               }
             />

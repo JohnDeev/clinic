@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import FrontPageLayout from "./FrontPageLayout";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const styles = (theme) => ({
   background: {
@@ -61,23 +62,26 @@ const Container = styled.div`
 `;
 
 function FrontPage(props) {
-  const { classes, openModal } = props;
+  const { classes, openModal, showModal } = props;
 
   return (
-    <FrontPageLayout backgroundClassName={classes.background}>
+    <FrontPageLayout showModal={showModal} backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       {/* <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" /> */}
-      <Typography color='inherit' align='center' variant='h2' marked='center' className={classes.h2}>
+      {/* <Typography color='inherit' align='center' variant='h2' marked='center' className={classes.h2}>
         Servicios Integrales de Salud del Magdalena
       </Typography>
       <Typography color='inherit' align='center' variant='h5' className={classes.h5}>
         Su salud en buenas manos.
-      </Typography>
+      </Typography> */}
+
       <Container>
         <h4>Citas Medicas</h4>
         <p>Agenda tus citas de medicina general y otras especialidades.</p>
+
         <button onClick={openModal}>Agendar Cita</button>
       </Container>
+      {/* <ScheduleModal showModal={showModal} /> */}
     </FrontPageLayout>
   );
 }

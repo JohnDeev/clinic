@@ -5,6 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import logo from "./../../../img/logosism.png";
 import Fade from "react-reveal/Fade";
+import { ScheduleModal } from "../../ScheduleModal";
 
 const styles = (theme) => ({
   root: {
@@ -22,9 +23,11 @@ const styles = (theme) => ({
   container: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(14),
+    height: "85%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
   },
   backdrop: {
     position: "absolute",
@@ -54,10 +57,12 @@ const styles = (theme) => ({
 });
 
 function FrontPageLayout(props) {
-  const { backgroundClassName, children, classes } = props;
+  const { backgroundClassName, children, showModal, classes } = props;
 
   return (
     <section className={classes.root}>
+      <ScheduleModal showModal={showModal} />
+
       <Container className={classes.container}>
         {/* <Fade top duration={1000}>
           <img src={logo} alt='sismlogo' width='80' height='147' />
